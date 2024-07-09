@@ -14,7 +14,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 const NavBar = () => {
   const list = (
-    <Box sx={{ width: 250 }} role="presentation">
+    
       <List>
         {['Home', 'Assignments', 'Upcoming slots', 'Read user guide', 'Contact Support', 'Frequently Asked Questions'].map((text, index) => {
           let icon;
@@ -48,13 +48,13 @@ const NavBar = () => {
           );
         })}
       </List>
-    </Box>
+    
   );
 
   return (
     <Drawer
       variant="persistent"
-      anchor="left"
+      
       open={true}
     >
       {list}

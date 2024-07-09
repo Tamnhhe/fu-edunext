@@ -4,7 +4,7 @@ import NavBar from './components/NavBar'; // Adjust the import path as necessary
 const App = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       {/* Other components go here */}
     </div>
   );
