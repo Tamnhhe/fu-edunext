@@ -265,192 +265,218 @@
     {
       "questionid": 1,
       "title": "How can organizations ensure that their data-driven technologies are used ethically?",
-      "slotid": 1
+      "slotid": 1,
+      "subjectid": 1,
+      "description": "Discuss the steps organizations can take to ensure ethical usage of data-driven technologies.",
+      "orderid": 1
     },
     {
       "questionid": 2,
       "title": "What are some potential risks associated with the unethical use of data-driven technologies?",
-      "slotid": 1
+      "slotid": 1,
+      "subjectid": 1,
+      "description": "List and explain the risks associated with the unethical use of data-driven technologies.",
+      "orderid": 2
     },
     {
       "questionid": 3,
       "title": "What are the key components of an effective ethical framework for technology use?",
-      "slotid": 2
+      "slotid": 2,
+      "subjectid": 1,
+      "description": "Identify and describe the key components of an effective ethical framework for technology use.",
+      "orderid": 1
     },
     {
       "questionid": 4,
       "title": "How can organizations turn ethical frameworks into actionable steps?",
-      "slotid": 2
+      "slotid": 2,
+      "subjectid": 1,
+      "description": "Explain the process of turning ethical frameworks into actionable steps within an organization.",
+      "orderid": 2
     },
     {
       "questionid": 5,
       "title": "What methods can be used to detect ethical risks in technology?",
-      "slotid": 3
+      "slotid": 3,
+      "subjectid": 1,
+      "description": "Discuss the various methods that can be used to detect ethical risks in technology projects.",
+      "orderid": 1
     },
     {
       "questionid": 6,
       "title": "How can organizations mitigate ethical risks in their technology projects?",
-      "slotid": 3
+      "slotid": 3,
+      "subjectid": 1,
+      "description": "Outline the strategies organizations can use to mitigate ethical risks in technology projects.",
+      "orderid": 2
     },
     {
       "questionid": 7,
       "title": "What strategies can be employed to manage fairness and non-discrimination risks in technology?",
-      "slotid": 4
+      "slotid": 4,
+      "subjectid": 1,
+      "description": "Describe the strategies that can be employed to manage fairness and non-discrimination risks in technology.",
+      "orderid": 1
     },
     {
       "questionid": 8,
       "title": "Why is it important to address fairness and non-discrimination in technology?",
-      "slotid": 4
+      "slotid": 4,
+      "subjectid": 1,
+      "description": "Explain the importance of addressing fairness and non-discrimination in technology.",
+      "orderid": 2
     },
     {
       "questionid": 9,
       "title": "How can ethical risks impact a business's reputation?",
-      "slotid": 5
+      "slotid": 5,
+      "subjectid": 1,
+      "description": "Discuss how ethical risks can impact a business's reputation and provide examples.",
+      "orderid": 1
     },
     {
       "questionid": 10,
       "title": "What are effective ways to communicate the business impacts of ethical risks to diverse stakeholders?",
-      "slotid": 5
+      "slotid": 5,
+      "subjectid": 1,
+      "description": "Identify effective ways to communicate the business impacts of ethical risks to diverse stakeholders.",
+      "orderid": 2
     },
     {
       "questionid": 11,
       "title": "What are the essential components of software requirements?",
-      "slotid": 6
+      "slotid": 6,
+      "subjectid": 2,
+      "description": "List and describe the essential components of software requirements.",
+      "orderid": 1
     },
     {
       "questionid": 12,
       "title": "Why is it important to establish clear software requirements?",
-      "slotid": 6
+      "slotid": 6,
+      "subjectid": 2,
+      "description": "Explain the importance of establishing clear software requirements in a project.",
+      "orderid": 2
     },
     {
       "questionid": 13,
       "title": "How can customer perspectives be integrated into software requirements?",
-      "slotid": 7
+      "slotid": 7,
+      "subjectid": 2,
+      "description": "Discuss how customer perspectives can be integrated into software requirements gathering.",
+      "orderid": 1
     },
     {
       "questionid": 14,
       "title": "What challenges might arise when gathering requirements from customers?",
-      "slotid": 7
+      "slotid": 7,
+      "subjectid": 2,
+      "description": "Identify the challenges that might arise when gathering requirements from customers.",
+      "orderid": 2
     },
     {
       "questionid": 15,
       "title": "What are the benefits of group discussions in summarizing requirements?",
-      "slotid": 8
+      "slotid": 8,
+      "subjectid": 2,
+      "description": "Explain the benefits of group discussions in the process of summarizing requirements.",
+      "orderid": 1
     },
     {
       "questionid": 16,
       "title": "How can group exercises enhance the understanding of software requirements?",
-      "slotid": 8
+      "slotid": 8,
+      "subjectid": 2,
+      "description": "Describe how group exercises can enhance the understanding of software requirements.",
+      "orderid": 2
     },
     {
       "questionid": 17,
       "title": "What steps are involved in establishing business requirements for a software project?",
-      "slotid": 9
+      "slotid": 9,
+      "subjectid": 2,
+      "description": "Outline the steps involved in establishing business requirements for a software project.",
+      "orderid": 1
     },
     {
       "questionid": 18,
       "title": "How do business requirements influence the overall software development process?",
-      "slotid": 9
+      "slotid": 9,
+      "subjectid": 2,
+      "description": "Discuss how business requirements influence the overall software development process.",
+      "orderid": 2
     },
     {
       "questionid": 19,
       "title": "What techniques can be used for effective requirements elicitation?",
-      "slotid": 10
+      "slotid": 10,
+      "subjectid": 2,
+      "description": "Identify and describe techniques for effective requirements elicitation.",
+      "orderid": 1
     },
     {
       "questionid": 20,
       "title": "Why is requirements elicitation a critical phase in software development?",
-      "slotid": 10
-    },
+      "slotid": 10,
+      "subjectid": 2,
+      "description": "Explain why requirements elicitation is a critical phase in software development.",
+      "orderid": 2
+    }
     {
       "questionid": 21,
       "title": "What is the significance of understanding the big picture in full stack web development?",
-      "slotid": 11
+      "slotid": 11,
+      "subjectid": 3,
+      "description": "Discuss the significance of understanding the big picture in full stack web development.",
+      "orderid": 1
     },
     {
       "questionid": 22,
       "title": "How does full stack web development differ from front-end or back-end development?",
-      "slotid": 11
+      "slotid": 11,
+      "subjectid": 3,
+      "description": "Explain the differences between full stack web development and front-end or back-end development.",
+      "orderid": 2
     },
     {
       "questionid": 23,
       "title": "What are the advantages of using JSX and ES6 in web development?",
-      "slotid": 12
+      "slotid": 12,
+      "subjectid": 3,
+      "description": "Identify the advantages of using JSX and ES6 in web development.",
+      "orderid": 1
     },
     {
       "questionid": 24,
       "title": "How can JSX improve the development process in React?",
-      "slotid": 12
+      "slotid": 12,
+      "subjectid": 3,
+      "description": "Discuss how JSX can improve the development process in React applications.",
+      "orderid": 2
     },
     {
       "questionid": 25,
       "title": "What are the benefits of creating custom JSX elements in a React application?",
-      "slotid": 13
+      "slotid": 13,
+      "subjectid": 3,
+      "description": "Explain the benefits of creating custom JSX elements in a React application.",
+      "orderid": 1
     },
     {
       "questionid": 26,
       "title": "How can custom JSX elements enhance the functionality of a web application?",
-      "slotid": 13
+      "slotid": 13,
+      "subjectid": 3,
+      "description": "Describe how custom JSX elements can enhance the functionality of a web application.",
+      "orderid": 2
     },
     {
       "questionid": 27,
       "title": "Why is Bootstrap popular for front-end development?",
-      "slotid": 14
-    },
-    {
-      "questionid": 28,
-      "title": "What are the key features of Bootstrap that make it useful for developers?",
-      "slotid": 14
-    },
-    {
-      "questionid": 29,
-      "title": "How can Bootstrap JavaScript components enhance user interface design?",
-      "slotid": 15
-    },
-    {
-      "questionid": 30,
-      "title": "What are some common use cases for Bootstrap JavaScript components?",
-      "slotid": 15
-    },
-    {
-      "questionid": 31,
-      "title": "What are the key factors in building an effective project team?",
-      "slotid": 16
-    },
-    {
-      "questionid": 32,
-      "title": "How can team dynamics impact the success of a software project?",
-      "slotid": 16
-    },
-    {
-      "questionid": 33,
-      "title": "What are the main principles of software analysis and design?",
-      "slotid": 17
-    },
-    {
-      "questionid": 34,
-      "title": "How can software analysis and design guides improve project outcomes?",
-      "slotid": 17
-    },
-    {
-      "questionid": 35,
-      "title": "Why is requirement clarification important in software design?",
-      "slotid": 18
-    },
-    {
-      "questionid": 36,
-      "title": "What strategies can be used for effective requirement clarification?",
-      "slotid": 18
-    },
-    {
-      "questionid": 37,
-      "title": "How can practicing design, coding, self-testing, and integration benefit a software project?",
-      "slotid": 19
-    },
-    {
-      "questionid": 38,
-      "title": "What are the challenges of integrating these practices into the development workflow?",
-      "slotid": 19
+      "slotid": 14,
+      "subjectid": 3,
+      "description": "Discuss why Bootstrap is popular for front-end development.",
+      "orderid": 1
     }
   ],
   "assignments": [

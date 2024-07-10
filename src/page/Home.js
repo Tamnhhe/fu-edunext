@@ -18,7 +18,6 @@ function Home() {
   return (
     <div>
       <Row>
-      <Col md={2}><NavBar /> </Col>
       <Col md={10}>
         <Row>
           <Col md={12} className='mt-4'><h1>Welcome to the Edunext Platform</h1>
