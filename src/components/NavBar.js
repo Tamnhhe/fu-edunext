@@ -32,7 +32,8 @@ const NavBar = () => {
         </div>
         {currentUser ? (
           <div className="welcome">
-            <span>Welcome, {currentUser.username}</span>
+            <span>Welcome, {currentUser.username}  </span>
+            <a href="/login">Logout</a>
           </div>
         ) : (
           <Navigate to="/login" />
