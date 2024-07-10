@@ -21,7 +21,7 @@ function SubjectList() {
                     <div>{subject.subname}</div>
                 </Col>
       </Card.Text>
-      <Button variant="primary">Go to course </Button>
+      <Button variant="primary" onClick={() => window.location.href = `/subject/${subject.subjectid}`}>Go to course </Button>
     </Card.Body>
   </Card>
   ))}

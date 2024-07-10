@@ -8,6 +8,7 @@ import { Container } from 'react-bootstrap';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Assignment from './page/Assignment';
 import './App.css';
+import SubjectDetail from './components/SubjectDetail';
 const App = () => {
   return (
     <Router>
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/login" element={<LoginPage/>} />
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/assignment" element={<Assignment />} />
+            <Route path="/subject/:id" element={<SubjectDetail />} />
           </Routes>
         
       </Router>
