@@ -65,12 +65,30 @@
       "username": "meomap",
       "password": "123",
       "role": "student"
+    },
+    {
+      "id": 12,
+      "username": "Tamnhhe",
+      "password": "huytam",
+      "role": "student"
     }
   ],
   "semesters": [
     {
       "semesterid": 1,
-      "semestername": "SP24",
+      "semestername": "SPRING2024",
+      "startdate": "2024-01-01",
+      "enddate": "2024-05-01"
+    },
+    {
+      "semesterid": 1,
+      "semestername": "SUMMER2024",
+      "startdate": "2024-01-01",
+      "enddate": "2024-05-01"
+    },
+    {
+      "semesterid": 1,
+      "semestername": "FALL2024",
       "startdate": "2024-01-01",
       "enddate": "2024-05-01"
     }
@@ -78,247 +96,357 @@
   "subjects": [
     {
       "subjectid": 1,
-      "subname": "Mathematics",
+      "subname": "ITE302c",
       "semesterid": 1
     },
     {
       "subjectid": 2,
-      "subname": "Physics",
+      "subname": "SWR302",
       "semesterid": 1
     },
     {
       "subjectid": 3,
-      "subname": "Chemistry",
+      "subname": "FER202",
       "semesterid": 1
     },
     {
       "subjectid": 4,
-      "subname": "Biology",
+      "subname": "SWP391",
       "semesterid": 1
     }
   ],
   "slots": [
     {
       "slotid": 1,
-      "slotcontent": "Algebra",
+      "title": "Promote the Ethical Use of Data-Driven Technologies",
       "startdate": "2024-01-10",
       "enddate": "2024-01-17",
       "subjectid": 1
     },
     {
       "slotid": 2,
-      "slotcontent": "Geometry",
-      "startdate": "2024-01-18",
-      "enddate": "2024-01-25",
+      "title": "Turn Ethical Frameworks into Actionable Steps",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 1
     },
     {
       "slotid": 3,
-      "slotcontent": "Calculus",
-      "startdate": "2024-01-26",
-      "enddate": "2024-02-02",
+      "title": "Detect and Mitigate Ethical Risks",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 1
     },
     {
       "slotid": 4,
-      "slotcontent": "Trigonometry",
-      "startdate": "2024-02-03",
-      "enddate": "2024-02-10",
+      "title": "Manage Fairness and Non-Discrimination Risks",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 1
     },
     {
       "slotid": 5,
-      "slotcontent": "Statistics",
-      "startdate": "2024-02-11",
-      "enddate": "2024-02-18",
+      "title": "Communicate the Business Impacts of Ethical Risks to Diverse Stakeholders",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 1
     },
     {
       "slotid": 6,
-      "slotcontent": "Mechanics",
+      "title": "The essential of software requirement",
       "startdate": "2024-01-10",
       "enddate": "2024-01-17",
       "subjectid": 2
     },
     {
       "slotid": 7,
-      "slotcontent": "Thermodynamics",
-      "startdate": "2024-01-18",
-      "enddate": "2024-01-25",
+      "title": "Requirements from the customer's perspective (cnt)",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 2
     },
     {
       "slotid": 8,
-      "slotcontent": "Electromagnetism",
-      "startdate": "2024-01-26",
-      "enddate": "2024-02-02",
+      "title": "Group discussion Summary and Exercises (groups)",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 2
     },
     {
       "slotid": 9,
-      "slotcontent": "Optics",
-      "startdate": "2024-02-03",
-      "enddate": "2024-02-10",
+      "title": "Establishing the business requirements",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 2
     },
     {
       "slotid": 10,
-      "slotcontent": "Quantum Mechanics",
-      "startdate": "2024-02-11",
-      "enddate": "2024-02-18",
+      "title": "Requirements elicitation",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 2
     },
     {
       "slotid": 11,
-      "slotcontent": "Organic Chemistry",
+      "title": "Full Stack Web Development: The Big Picture",
       "startdate": "2024-01-10",
       "enddate": "2024-01-17",
       "subjectid": 3
     },
     {
       "slotid": 12,
-      "slotcontent": "Inorganic Chemistry",
-      "startdate": "2024-01-18",
-      "enddate": "2024-01-25",
+      "title": "Rendering with JSX + ES 6",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 3
     },
     {
       "slotid": 13,
-      "slotcontent": "Physical Chemistry",
-      "startdate": "2024-01-26",
-      "enddate": "2024-02-02",
+      "title": "Creating your own JSX elements",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 3
     },
     {
       "slotid": 14,
-      "slotcontent": "Analytical Chemistry",
-      "startdate": "2024-02-03",
-      "enddate": "2024-02-10",
+      "title": "Bootstrap",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 3
     },
     {
       "slotid": 15,
-      "slotcontent": "Biochemistry",
-      "startdate": "2024-02-11",
-      "enddate": "2024-02-18",
+      "title": "Bootstrap JavaScript Components",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 3
     },
     {
       "slotid": 16,
-      "slotcontent": "Cell Biology",
+      "title": "Project team building",
       "startdate": "2024-01-10",
       "enddate": "2024-01-17",
       "subjectid": 4
     },
     {
       "slotid": 17,
-      "slotcontent": "Genetics",
-      "startdate": "2024-01-18",
-      "enddate": "2024-01-25",
+      "title": "Software analysis & design guides part 1/2",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 4
     },
     {
       "slotid": 18,
-      "slotcontent": "Ecology",
-      "startdate": "2024-01-26",
-      "enddate": "2024-02-02",
+      "title": "Requirement clarification & software design",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 4
     },
     {
       "slotid": 19,
-      "slotcontent": "Evolution",
-      "startdate": "2024-02-03",
-      "enddate": "2024-02-10",
+      "title": "Requirement clarification & software design",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 4
     },
     {
       "slotid": 20,
-      "slotcontent": "Human Anatomy",
-      "startdate": "2024-02-11",
-      "enddate": "2024-02-18",
+      "title": "Practice: design, code, self-test, integrate",
+      "startdate": "2024-01-10",
+      "enddate": "2024-01-17",
       "subjectid": 4
     }
   ],
   "questions": [
     {
       "questionid": 1,
-      "questioncontent": "What is 2+2?"
+      "title": "How can organizations ensure that their data-driven technologies are used ethically?",
+      "slotid": 1
     },
     {
       "questionid": 2,
-      "questioncontent": "What is the area of a triangle?"
+      "title": "What are some potential risks associated with the unethical use of data-driven technologies?",
+      "slotid": 1
     },
     {
       "questionid": 3,
-      "questioncontent": "What is the derivative of x^2?"
+      "title": "What are the key components of an effective ethical framework for technology use?",
+      "slotid": 2
     },
     {
       "questionid": 4,
-      "questioncontent": "What is sin(90 degrees)?"
+      "title": "How can organizations turn ethical frameworks into actionable steps?",
+      "slotid": 2
     },
     {
       "questionid": 5,
-      "questioncontent": "What is the mean of 1, 2, 3, 4, 5?"
+      "title": "What methods can be used to detect ethical risks in technology?",
+      "slotid": 3
     },
     {
       "questionid": 6,
-      "questioncontent": "What is Newton's first law?"
+      "title": "How can organizations mitigate ethical risks in their technology projects?",
+      "slotid": 3
     },
     {
       "questionid": 7,
-      "questioncontent": "What is the first law of thermodynamics?"
+      "title": "What strategies can be employed to manage fairness and non-discrimination risks in technology?",
+      "slotid": 4
     },
     {
       "questionid": 8,
-      "questioncontent": "What is Coulomb's law?"
+      "title": "Why is it important to address fairness and non-discrimination in technology?",
+      "slotid": 4
     },
     {
       "questionid": 9,
-      "questioncontent": "What is Snell's law?"
+      "title": "How can ethical risks impact a business's reputation?",
+      "slotid": 5
     },
     {
       "questionid": 10,
-      "questioncontent": "What is Heisenberg's uncertainty principle?"
+      "title": "What are effective ways to communicate the business impacts of ethical risks to diverse stakeholders?",
+      "slotid": 5
     },
     {
       "questionid": 11,
-      "questioncontent": "What is an alkane?"
+      "title": "What are the essential components of software requirements?",
+      "slotid": 6
     },
     {
       "questionid": 12,
-      "questioncontent": "What is a coordination compound?"
+      "title": "Why is it important to establish clear software requirements?",
+      "slotid": 6
     },
     {
       "questionid": 13,
-      "questioncontent": "What is Gibbs free energy?"
+      "title": "How can customer perspectives be integrated into software requirements?",
+      "slotid": 7
     },
     {
       "questionid": 14,
-      "questioncontent": "What is chromatography?"
+      "title": "What challenges might arise when gathering requirements from customers?",
+      "slotid": 7
     },
     {
       "questionid": 15,
-      "questioncontent": "What is an enzyme?"
+      "title": "What are the benefits of group discussions in summarizing requirements?",
+      "slotid": 8
     },
     {
       "questionid": 16,
-      "questioncontent": "What is the function of the cell membrane?"
+      "title": "How can group exercises enhance the understanding of software requirements?",
+      "slotid": 8
     },
     {
       "questionid": 17,
-      "questioncontent": "What is DNA replication?"
+      "title": "What steps are involved in establishing business requirements for a software project?",
+      "slotid": 9
     },
     {
       "questionid": 18,
-      "questioncontent": "What is an ecosystem?"
+      "title": "How do business requirements influence the overall software development process?",
+      "slotid": 9
     },
     {
       "questionid": 19,
-      "questioncontent": "What is natural selection?"
+      "title": "What techniques can be used for effective requirements elicitation?",
+      "slotid": 10
     },
     {
       "questionid": 20,
-      "questioncontent": "What is the function of the heart?"
+      "title": "Why is requirements elicitation a critical phase in software development?",
+      "slotid": 10
+    },
+    {
+      "questionid": 21,
+      "title": "What is the significance of understanding the big picture in full stack web development?",
+      "slotid": 11
+    },
+    {
+      "questionid": 22,
+      "title": "How does full stack web development differ from front-end or back-end development?",
+      "slotid": 11
+    },
+    {
+      "questionid": 23,
+      "title": "What are the advantages of using JSX and ES6 in web development?",
+      "slotid": 12
+    },
+    {
+      "questionid": 24,
+      "title": "How can JSX improve the development process in React?",
+      "slotid": 12
+    },
+    {
+      "questionid": 25,
+      "title": "What are the benefits of creating custom JSX elements in a React application?",
+      "slotid": 13
+    },
+    {
+      "questionid": 26,
+      "title": "How can custom JSX elements enhance the functionality of a web application?",
+      "slotid": 13
+    },
+    {
+      "questionid": 27,
+      "title": "Why is Bootstrap popular for front-end development?",
+      "slotid": 14
+    },
+    {
+      "questionid": 28,
+      "title": "What are the key features of Bootstrap that make it useful for developers?",
+      "slotid": 14
+    },
+    {
+      "questionid": 29,
+      "title": "How can Bootstrap JavaScript components enhance user interface design?",
+      "slotid": 15
+    },
+    {
+      "questionid": 30,
+      "title": "What are some common use cases for Bootstrap JavaScript components?",
+      "slotid": 15
+    },
+    {
+      "questionid": 31,
+      "title": "What are the key factors in building an effective project team?",
+      "slotid": 16
+    },
+    {
+      "questionid": 32,
+      "title": "How can team dynamics impact the success of a software project?",
+      "slotid": 16
+    },
+    {
+      "questionid": 33,
+      "title": "What are the main principles of software analysis and design?",
+      "slotid": 17
+    },
+    {
+      "questionid": 34,
+      "title": "How can software analysis and design guides improve project outcomes?",
+      "slotid": 17
+    },
+    {
+      "questionid": 35,
+      "title": "Why is requirement clarification important in software design?",
+      "slotid": 18
+    },
+    {
+      "questionid": 36,
+      "title": "What strategies can be used for effective requirement clarification?",
+      "slotid": 18
+    },
+    {
+      "questionid": 37,
+      "title": "How can practicing design, coding, self-testing, and integration benefit a software project?",
+      "slotid": 19
+    },
+    {
+      "questionid": 38,
+      "title": "What are the challenges of integrating these practices into the development workflow?",
+      "slotid": 19
     }
   ],
   "assignments": [
