@@ -1,23 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
+import { UserContext } from '../context/UserContext'; // Import UserContext
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '../css/RegisterForm.css'; // Import custom CSS for styling
 
 const RegisterForm = ({ onSubmit }) => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [fullname, setFullname] = useState('');
-
+  const [password2, setPassword2] = useState('');
+  // const [fullname, setFullname] = useState('');
+  const { addUser } = useContext(UserContext); // Access addUser from UserContext
+  const role = "student";
   const handleSubmit = (e) => {
     e.preventDefault();
     // Basic validation
-    if (!username || !password || !email || !fullname) {
+    // || !fullname          , fullname 
+    if (!username || !password || !password2   ) {
       alert('Please enter all fields.');
       return;
+    } else{
+        console.log("Register Successful");
+        addUser({ username, password, role});
+        navigate("/login");
     }
     // Call the onSubmit prop with the entered credentials
-    onSubmit({ username, password, email, fullname });
+    // onSubmit({ username, password, password2});
   };
 
   return (
@@ -37,17 +46,7 @@ const RegisterForm = ({ onSubmit }) => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicFullname">
+            {/* <Form.Group className="mb-3" controlId="formBasicFullname">
               <Form.Label>Full Name</Form.Label>
               <Form.Control
                 type="text"
@@ -55,7 +54,7 @@ const RegisterForm = ({ onSubmit }) => {
                 value={fullname}
                 onChange={(e) => setFullname(e.target.value)}
               />
-            </Form.Group>
+            </Form.Group> */}
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
@@ -64,6 +63,16 @@ const RegisterForm = ({ onSubmit }) => {
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formConfirmBasicPassword">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Enter confirm password"
+                value={password2}
+                onChange={(e) => setPassword2(e.target.value)}
               />
             </Form.Group>
 

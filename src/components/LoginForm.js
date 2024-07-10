@@ -11,7 +11,7 @@ const LoginForm = ({ onSubmit }) => {
     const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { findUserByUsername } = useContext(UserContext); // Access findUserByUsername from UserContext
+  const { findUserByUsername, checkLogin, setCurrentUser } = useContext(UserContext); // Access findUserByUsername from UserContext
 
 //   const history = browserHistory;
 
@@ -34,10 +34,15 @@ const LoginForm = ({ onSubmit }) => {
     if (user.password !== password) {
       alert('Invalid password. Please try again.');
       return;
-    } else{
-        console.log("Login Successful");
-        navigate("/home");
+    } 
+
+    // Check if the user is logged in
+    if (checkLogin(username, password)) {
+      alert('Login successful!');
+      setCurrentUser(user);  
+      navigate("/home");
     }
+    
 
     // Call the onSubmit prop with the entered credentials
     // onSubmit({ username, password });

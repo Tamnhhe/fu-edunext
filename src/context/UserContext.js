@@ -6,6 +6,7 @@ export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
 
 
   // Mock API endpoint for users
@@ -31,10 +32,36 @@ const UserProvider = ({ children }) => {
     return users.find(user => user.username === username);
   };
 
+  const checkLogin = (username, password) => {
+    return users.some(user => user.username === username && user.password === password);
+  };
+
+   // Function to add a new user
+   const addUser = async (newUser) => {
+    try {
+
+      // Assuming newUser is an object with username and password
+      const response = await axios.post(API_URL, {
+        id: users.length + 1,
+        ...newUser
+        });
+      alert('User added successfully');
+      setUsers([...users, response.data]); // Update local state
+      console.log('User added successfully:', response.data);
+      console.log('User List', users);
+    } catch (error) {
+      console.error('Error adding user:', error);
+    }
+  };
+
   // Context value object
   const contextValue = {
     users,
-    findUserByUsername
+    findUserByUsername,
+    addUser,
+    currentUser,
+    setCurrentUser,
+    checkLogin
     // Add other state and functions as needed
   };
 
