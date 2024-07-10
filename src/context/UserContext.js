@@ -7,11 +7,14 @@ export const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
+  const [semesters, setSemesters] = useState([]);
 
 
   // Mock API endpoint for users
   const API_URL = 'http://localhost:9999/users'; // Adjust as per your API configuration
+  const SEMESTER_URL = 'http://localhost:9999/semesters';
 
+  
   // Fetch users data on component mount
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +30,22 @@ const UserProvider = ({ children }) => {
   }, []);
 
   console.log(users);
+
+  // Fetch semesters data on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(SEMESTER_URL);
+        setSemesters(response.data);
+      } catch (error) {
+        console.error('Error fetching semesters:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   // Function to find a user by username
   const findUserByUsername = (username) => {
     return users.find(user => user.username === username);
@@ -61,7 +80,8 @@ const UserProvider = ({ children }) => {
     addUser,
     currentUser,
     setCurrentUser,
-    checkLogin
+    checkLogin,
+    semesters
     // Add other state and functions as needed
   };
 
