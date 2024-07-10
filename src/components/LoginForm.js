@@ -1,12 +1,19 @@
 // LoginForm.js
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from '../context/UserContext'; // Import UserContext
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '../css/LoginForm.css'; // Import custom CSS for styling
 
 const LoginForm = ({ onSubmit }) => {
+    const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { findUserByUsername } = useContext(UserContext); // Access findUserByUsername from UserContext
+
+//   const history = browserHistory;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +22,26 @@ const LoginForm = ({ onSubmit }) => {
       alert('Please enter both username and password.');
       return;
     }
+
+    // Check if the user exists
+    const user = findUserByUsername(username);
+    if (!user) {
+      alert('User not found. Please check your credentials.');
+      return;
+    }
+
+    // Validate password
+    if (user.password !== password) {
+      alert('Invalid password. Please try again.');
+      return;
+    } else{
+        console.log("Login Successful");
+        navigate("/home");
+    }
+
     // Call the onSubmit prop with the entered credentials
-    onSubmit({ username, password });
+    // onSubmit({ username, password });
+
   };
 
   return (
@@ -29,7 +54,7 @@ const LoginForm = ({ onSubmit }) => {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
-              type="email"
+              type="text"
               placeholder="Enter email"
               value={username}
               onChange={(e) => setUsername(e.target.value)}

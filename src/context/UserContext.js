@@ -7,6 +7,7 @@ export const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
 
+
   // Mock API endpoint for users
   const API_URL = 'http://localhost:9999/users'; // Adjust as per your API configuration
 
@@ -24,6 +25,7 @@ const UserProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  console.log(users);
   // Function to find a user by username
   const findUserByUsername = (username) => {
     return users.find(user => user.username === username);
