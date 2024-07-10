@@ -6,6 +6,8 @@ import RegisterForm from './components/RegisterForm';
 import Home from './page/Home';
 import { Container } from 'react-bootstrap';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Assignment from './page/Assignment';
+import './App.css';
 const App = () => {
   return (
     <Router>
@@ -20,6 +22,7 @@ const App = () => {
             <Route path="/home" element={<Home/>} />
             <Route path="/login" element={<LoginPage/>} />
             <Route path="/register" element={<RegisterForm />} />
+            <Route path="/assignment" element={<Assignment />} />
           </Routes>
         </Container>
       </Router>
