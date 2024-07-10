@@ -20,8 +20,8 @@ function Assignment() {
       <Col md={2}><NavBar /> </Col>
       <Col md={10}>
         <Row>
-          <Col md={12}><h1>Welcome to the Edunext Platform</h1>
-          <SemesterDropdown />
+          <Col md={12} className='text-center mt-4'><h1>My Assignment</h1>
+          
           </Col>
         </Row>
        </Col>

@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
         {/* <NavBar /> */}
-        <Container className="mt-4">
+        
           <Routes>
             <Route path="/" element=
               {
@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/assignment" element={<Assignment />} />
           </Routes>
-        </Container>
+        
       </Router>
   );
 };

@@ -8,12 +8,12 @@ const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [semesters, setSemesters] = useState([]);
-
+  const [subjects, setSubjects] = useState([]);
 
   // Mock API endpoint for users
   const API_URL = 'http://localhost:9999/users'; // Adjust as per your API configuration
   const SEMESTER_URL = 'http://localhost:9999/semesters';
-
+  const SUBJECT_URL = 'http://localhost:9999/subjects';
   
   // Fetch users data on component mount
   useEffect(() => {
@@ -39,6 +39,19 @@ const UserProvider = ({ children }) => {
         setSemesters(response.data);
       } catch (error) {
         console.error('Error fetching semesters:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+   // Fetch subject data on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(SUBJECT_URL);
+        setSubjects(response.data);
+      } catch (error) {
+        console.error('Error fetching subjects:', error);
       }
     };
 
@@ -81,7 +94,8 @@ const UserProvider = ({ children }) => {
     currentUser,
     setCurrentUser,
     checkLogin,
-    semesters
+    semesters,
+    subjects
     // Add other state and functions as needed
   };
 
