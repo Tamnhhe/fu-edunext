@@ -75,9 +75,9 @@ const App = () => {
 const Main = () => {
   const location = useLocation();
 
-  const hideNavBarRoutes = ['/login', '/register']; // Add paths where NavBar should be hidden
+  const hideNavBarRoutes = ['/login',"/", '/register']; // Add paths where NavBar should be hidden
   const shouldHideNavBar = hideNavBarRoutes.includes(location.pathname);
-
+  
   return (
     <Container fluid>
       <Row>
@@ -88,7 +88,7 @@ const Main = () => {
         )}
         <Col md={!shouldHideNavBar ? 10 : 12}>
           <Routes>
-            <Route path="/" element={<LoginPage />} />
+            <Route path="/"   element={<LoginPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterForm />} />
