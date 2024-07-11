@@ -156,12 +156,14 @@ const UserProvider = ({ children }) => {
   const [subjects, setSubjects] = useState([]);
   const [slots, setSlots] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [comments, setComments] = useState([]);
 
   const API_URL = 'http://localhost:9999/users'; // Adjust as per your API configuration
   const SEMESTER_URL = 'http://localhost:9999/semesters';
   const SUBJECT_URL = 'http://localhost:9999/subjects';
   const SLOT_URL = 'http://localhost:9999/slots';
   const QUESTION_URL = 'http://localhost:9999/questions';
+  const COMMENT_URL='http://localhost:9999/comments';
 
   // Fetch users data on component mount
   useEffect(() => {
@@ -233,11 +235,34 @@ const UserProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  // Fetch comment data on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(COMMENT_URL);
+        setComments(response.data);
+      } catch (error) {
+        console.error('Error fetching comments:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+  //Function to get username by id
+  const getUserNameById = (id) => {
+    const user = users.find(user => user.id === id);
+    return user ? user.username : '';
+  };
+
   // Function to find a user by username
   const findUserByUsername = (username) => {
     return users.find(user => user.username === username);
   };
 
+
+  // Function to checking login
   const checkLogin = (username, password) => {
     return users.some(user => user.username === username && user.password === password);
   };
@@ -272,7 +297,10 @@ const UserProvider = ({ children }) => {
     semesters,
     subjects,
     slots,
-    questions
+    questions,
+    comments,
+    setComments,
+    getUserNameById
     // Add other state and functions as needed
   };
 
