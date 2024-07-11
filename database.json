@@ -1,73 +1,73 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "student1",
       "password": "pass1",
       "role": "student"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "student2",
       "password": "pass2",
       "role": "student"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "student3",
       "password": "pass3",
       "role": "student"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "student4",
       "password": "pass4",
       "role": "student"
     },
     {
-      "id": 5,
+      "id": "5",
       "username": "student5",
       "password": "pass5",
       "role": "student"
     },
     {
-      "id": 6,
+      "id": "6",
       "username": "student6",
       "password": "pass6",
       "role": "student"
     },
     {
-      "id": 7,
+      "id": "7",
       "username": "student7",
       "password": "pass7",
       "role": "student"
     },
     {
-      "id": 8,
+      "id": "8",
       "username": "student8",
       "password": "pass8",
       "role": "student"
     },
     {
-      "id": 9,
+      "id": "9",
       "username": "teacher1",
       "password": "pass9",
       "role": "teacher"
     },
     {
-      "id": 10,
+      "id": "10",
       "username": "teacher2",
       "password": "pass10",
       "role": "teacher"
     },
     {
-      "id": 11,
+      "id": "11",
       "username": "meomap",
       "password": "123",
       "role": "student"
     },
     {
-      "id": 12,
+      "id": "12",
       "username": "Tamnhhe",
       "password": "huytam",
       "role": "student"
@@ -78,19 +78,22 @@
       "semesterid": 1,
       "semestername": "SPRING2024",
       "startdate": "2024-01-01",
-      "enddate": "2024-05-01"
+      "enddate": "2024-05-01",
+      "id": "8bce"
     },
     {
       "semesterid": 2,
       "semestername": "SUMMER2024",
       "startdate": "2024-05-02",
-      "enddate": "2024-09-01"
+      "enddate": "2024-09-01",
+      "id": "84df"
     },
     {
       "semesterid": 3,
       "semestername": "FALL2024",
       "startdate": "2024-09-02",
-      "enddate": "2024-12-01"
+      "enddate": "2024-12-01",
+      "id": "aa2c"
     }
   ],
   "subjects": [
@@ -98,25 +101,29 @@
       "subjectid": 1,
       "subname": "ITE302c",
       "subtitle": "Information Technology Ethical",
-      "semesterid": 1
+      "semesterid": 1,
+      "id": "aa20"
     },
     {
       "subjectid": 2,
       "subname": "SWR302",
       "subtitle": "Software Requirements Engineering",
-      "semesterid": 1
+      "semesterid": 1,
+      "id": "4c74"
     },
     {
       "subjectid": 3,
       "subname": "FER202",
       "subtitle": "Front-end Development With React",
-      "semesterid": 1
+      "semesterid": 1,
+      "id": "fa6a"
     },
     {
       "subjectid": 4,
       "subname": "SWP391",
       "subtitle": "Software Project Management",
-      "semesterid": 1
+      "semesterid": 1,
+      "id": "da54"
     }
   ],
   "slots": [
@@ -126,7 +133,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 1,
-      "name": "Slot 1"
+      "name": "Slot 1",
+      "id": "64d1"
     },
     {
       "slotid": 2,
@@ -134,7 +142,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 1,
-      "name": "Slot 2"
+      "name": "Slot 2",
+      "id": "3489"
     },
     {
       "slotid": 3,
@@ -142,7 +151,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
       "subjectid": 1,
-      "name": "Slot 3"
+      "name": "Slot 3",
+      "id": "7d6c"
     },
     {
       "slotid": 4,
@@ -150,7 +160,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
       "subjectid": 1,
-      "name": "Slot 4"
+      "name": "Slot 4",
+      "id": "240a"
     },
     {
       "slotid": 5,
@@ -158,7 +169,8 @@
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 1,
-      "name": "Slot 5"
+      "name": "Slot 5",
+      "id": "1522"
     },
     {
       "slotid": 6,
@@ -166,7 +178,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 2,
-      "name": "Slot 1"
+      "name": "Slot 1",
+      "id": "3a18"
     },
     {
       "slotid": 7,
@@ -174,7 +187,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 2,
-      "name": "Slot 2"
+      "name": "Slot 2",
+      "id": "e843"
     },
     {
       "slotid": 8,
@@ -182,7 +196,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
       "subjectid": 2,
-      "name": "Slot 3"
+      "name": "Slot 3",
+      "id": "24ab"
     },
     {
       "slotid": 9,
@@ -190,7 +205,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
       "subjectid": 2,
-      "name": "Slot 4"
+      "name": "Slot 4",
+      "id": "823c"
     },
     {
       "slotid": 10,
@@ -198,7 +214,8 @@
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 2,
-      "name": "Slot 5"
+      "name": "Slot 5",
+      "id": "0475"
     },
     {
       "slotid": 11,
@@ -206,7 +223,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 3,
-      "name": "Slot 1"
+      "name": "Slot 1",
+      "id": "e9b9"
     },
     {
       "slotid": 12,
@@ -214,7 +232,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 3,
-      "name": "Slot 2"
+      "name": "Slot 2",
+      "id": "9978"
     },
     {
       "slotid": 13,
@@ -222,7 +241,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
       "subjectid": 3,
-      "name": "Slot 3"
+      "name": "Slot 3",
+      "id": "6710"
     },
     {
       "slotid": 14,
@@ -230,7 +250,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
       "subjectid": 3,
-      "name": "Slot 4"
+      "name": "Slot 4",
+      "id": "e609"
     },
     {
       "slotid": 15,
@@ -238,7 +259,8 @@
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 3,
-      "name": "Slot 5"
+      "name": "Slot 5",
+      "id": "dbf3"
     },
     {
       "slotid": 16,
@@ -246,7 +268,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 4,
-      "name": "Slot 1"
+      "name": "Slot 1",
+      "id": "db17"
     },
     {
       "slotid": 17,
@@ -254,7 +277,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
       "subjectid": 4,
-      "name": "Slot 2"
+      "name": "Slot 2",
+      "id": "5234"
     },
     {
       "slotid": 18,
@@ -262,7 +286,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
       "subjectid": 4,
-      "name": "Slot 3"
+      "name": "Slot 3",
+      "id": "2422"
     },
     {
       "slotid": 19,
@@ -270,7 +295,8 @@
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
       "subjectid": 4,
-      "name": "Slot 4"
+      "name": "Slot 4",
+      "id": "65b4"
     },
     {
       "slotid": 20,
@@ -278,7 +304,8 @@
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 4,
-      "name": "Slot 5"
+      "name": "Slot 5",
+      "id": "4e5c"
     }
   ],
   "questions": [
@@ -288,7 +315,8 @@
       "slotid": 1,
       "subjectid": 1,
       "description": "Discuss the steps organizations can take to ensure ethical usage of data-driven technologies.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "2514"
     },
     {
       "questionid": 2,
@@ -296,7 +324,8 @@
       "slotid": 1,
       "subjectid": 1,
       "description": "List and explain the risks associated with the unethical use of data-driven technologies.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "d6be"
     },
     {
       "questionid": 3,
@@ -304,7 +333,8 @@
       "slotid": 2,
       "subjectid": 1,
       "description": "Identify and describe the key components of an effective ethical framework for technology use.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "6caf"
     },
     {
       "questionid": 4,
@@ -312,7 +342,8 @@
       "slotid": 2,
       "subjectid": 1,
       "description": "Explain the process of turning ethical frameworks into actionable steps within an organization.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "70c7"
     },
     {
       "questionid": 5,
@@ -320,7 +351,8 @@
       "slotid": 3,
       "subjectid": 1,
       "description": "Discuss the various methods that can be used to detect ethical risks in technology projects.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "5772"
     },
     {
       "questionid": 6,
@@ -328,7 +360,8 @@
       "slotid": 3,
       "subjectid": 1,
       "description": "Outline the strategies organizations can use to mitigate ethical risks in technology projects.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "7ef2"
     },
     {
       "questionid": 7,
@@ -336,7 +369,8 @@
       "slotid": 4,
       "subjectid": 1,
       "description": "Describe the strategies that can be employed to manage fairness and non-discrimination risks in technology.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "3d2d"
     },
     {
       "questionid": 8,
@@ -344,7 +378,8 @@
       "slotid": 4,
       "subjectid": 1,
       "description": "Explain the importance of addressing fairness and non-discrimination in technology.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "6bc9"
     },
     {
       "questionid": 9,
@@ -352,7 +387,8 @@
       "slotid": 5,
       "subjectid": 1,
       "description": "Discuss how ethical risks can impact a business's reputation and provide examples.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "c22c"
     },
     {
       "questionid": 10,
@@ -360,7 +396,8 @@
       "slotid": 5,
       "subjectid": 1,
       "description": "Identify effective ways to communicate the business impacts of ethical risks to diverse stakeholders.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "ea79"
     },
     {
       "questionid": 11,
@@ -368,7 +405,8 @@
       "slotid": 6,
       "subjectid": 2,
       "description": "List and describe the essential components of software requirements.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "d4bd"
     },
     {
       "questionid": 12,
@@ -376,7 +414,8 @@
       "slotid": 6,
       "subjectid": 2,
       "description": "Explain the importance of establishing clear software requirements in a project.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "fc18"
     },
     {
       "questionid": 13,
@@ -384,7 +423,8 @@
       "slotid": 7,
       "subjectid": 2,
       "description": "Discuss how customer perspectives can be integrated into software requirements gathering.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "3b92"
     },
     {
       "questionid": 14,
@@ -392,7 +432,8 @@
       "slotid": 7,
       "subjectid": 2,
       "description": "Identify the challenges that might arise when gathering requirements from customers.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "93b3"
     },
     {
       "questionid": 15,
@@ -400,7 +441,8 @@
       "slotid": 8,
       "subjectid": 2,
       "description": "Explain the benefits of group discussions in the process of summarizing requirements.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "68ce"
     },
     {
       "questionid": 16,
@@ -408,7 +450,8 @@
       "slotid": 8,
       "subjectid": 2,
       "description": "Describe how group exercises can enhance the understanding of software requirements.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "8831"
     },
     {
       "questionid": 17,
@@ -416,7 +459,8 @@
       "slotid": 9,
       "subjectid": 2,
       "description": "Outline the steps involved in establishing business requirements for a software project.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "2dbd"
     },
     {
       "questionid": 18,
@@ -424,7 +468,8 @@
       "slotid": 9,
       "subjectid": 2,
       "description": "Discuss how business requirements influence the overall software development process.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "e10d"
     },
     {
       "questionid": 19,
@@ -432,7 +477,8 @@
       "slotid": 10,
       "subjectid": 2,
       "description": "Identify and describe techniques for effective requirements elicitation.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "f313"
     },
     {
       "questionid": 20,
@@ -440,7 +486,8 @@
       "slotid": 10,
       "subjectid": 2,
       "description": "Explain why requirements elicitation is a critical phase in software development.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "4c5a"
     },
     {
       "questionid": 21,
@@ -448,7 +495,8 @@
       "slotid": 11,
       "subjectid": 3,
       "description": "Discuss the significance of understanding the big picture in full stack web development.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "2c11"
     },
     {
       "questionid": 22,
@@ -456,7 +504,8 @@
       "slotid": 11,
       "subjectid": 3,
       "description": "Explain the differences between full stack web development and front-end or back-end development.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "70a4"
     },
     {
       "questionid": 23,
@@ -464,7 +513,8 @@
       "slotid": 12,
       "subjectid": 3,
       "description": "Identify the advantages of using JSX and ES6 in web development.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "46af"
     },
     {
       "questionid": 24,
@@ -472,7 +522,8 @@
       "slotid": 12,
       "subjectid": 3,
       "description": "Discuss how JSX can improve the development process in React applications.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "46d0"
     },
     {
       "questionid": 25,
@@ -480,7 +531,8 @@
       "slotid": 13,
       "subjectid": 3,
       "description": "Explain the benefits of creating custom JSX elements in a React application.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "4438"
     },
     {
       "questionid": 26,
@@ -488,7 +540,8 @@
       "slotid": 13,
       "subjectid": 3,
       "description": "Describe how custom JSX elements can enhance the functionality of a web application.",
-      "orderid": 2
+      "orderid": 2,
+      "id": "fa0e"
     },
     {
       "questionid": 27,
@@ -496,7 +549,8 @@
       "slotid": 14,
       "subjectid": 3,
       "description": "Discuss why Bootstrap is popular for front-end development.",
-      "orderid": 1
+      "orderid": 1,
+      "id": "d79b"
     }
   ],
   "assignments": [
@@ -507,7 +561,8 @@
       "questionid": 1,
       "assignmentTitle": "Assignment 1 Title",
       "assignmentDescription": "This is the description for Assignment 1.",
-      "duedate": "2024-01-15"
+      "duedate": "2024-01-15",
+      "id": "b3da"
     },
     {
       "assignmentid": 2,
@@ -516,7 +571,8 @@
       "questionid": 2,
       "assignmentTitle": "Assignment 2 Title",
       "assignmentDescription": "This is the description for Assignment 2.",
-      "duedate": "2024-01-22"
+      "duedate": "2024-01-22",
+      "id": "17f5"
     },
     {
       "assignmentid": 3,
@@ -525,7 +581,8 @@
       "questionid": 6,
       "assignmentTitle": "Assignment 3 Title",
       "assignmentDescription": "This is the description for Assignment 3.",
-      "duedate": "2024-01-15"
+      "duedate": "2024-01-15",
+      "id": "c320"
     },
     {
       "assignmentid": 4,
@@ -534,7 +591,8 @@
       "questionid": 7,
       "assignmentTitle": "Assignment 4 Title",
       "assignmentDescription": "This is the description for Assignment 4.",
-      "duedate": "2024-01-22"
+      "duedate": "2024-01-22",
+      "id": "7e89"
     }
   ],
   "comments": [
@@ -543,129 +601,149 @@
       "questionid": 1,
       "userid": 1,
       "comment": "Great question, thanks!",
-      "created": "2024-01-15"
+      "created": "2024-01-15",
+      "id": "ca5e"
     },
     {
       "commentid": 2,
       "questionid": 1,
       "userid": 3,
       "comment": "This question really makes me think about the ethical implications of technology. I believe an effective ethical framework should be comprehensive and adaptable.",
-      "created": "2024-01-15"
+      "created": "2024-01-15",
+      "id": "454e"
     },
     {
       "commentid": 3,
       "questionid": 5,
       "userid": 2,
       "comment": "Detecting ethical risks is crucial for maintaining trust in technology. We should consider both technical and social aspects.",
-      "created": "2024-01-16"
+      "created": "2024-01-16",
+      "id": "a2b5"
     },
     {
       "commentid": 4,
       "questionid": 7,
       "userid": 3,
       "comment": "Managing fairness and non-discrimination risks is essential for creating inclusive technologies. It's a challenging but necessary task.",
-      "created": "2024-07-30"
+      "created": "2024-07-30",
+      "id": "fe86"
     },
     {
       "commentid": 5,
       "questionid": 9,
       "userid": 4,
       "comment": "Ethical risks can severely impact a business's reputation. Companies must prioritize ethical considerations to build trust with their customers.",
-      "created": "2024-01-18"
+      "created": "2024-01-18",
+      "id": "8db7"
     },
     {
       "commentid": 6,
       "questionid": 11,
       "userid": 5,
       "comment": "Clear software requirements are the backbone of a successful project. Without them, projects can easily go off track.",
-      "created": "2024-01-19"
+      "created": "2024-01-19",
+      "id": "7087"
     },
     {
       "commentid": 7,
       "questionid": 13,
       "userid": 6,
       "comment": "Integrating customer perspectives into software requirements ensures the final product meets user needs. It's a critical step.",
-      "created": "2024-01-20"
+      "created": "2024-01-20",
+      "id": "89bf"
     },
     {
       "commentid": 8,
       "questionid": 17,
       "userid": 7,
       "comment": "Establishing business requirements early on helps align the project goals with the company's objectives. It's a foundational step.",
-      "created": "2024-01-21"
+      "created": "2024-01-21",
+      "id": "8f64"
     },
     {
       "commentid": 9,
       "questionid": 6,
       "userid": 8,
       "comment": "Understanding the big picture in full stack web development helps developers create more cohesive and efficient applications.",
-      "created": "2024-01-22"
+      "created": "2024-01-22",
+      "id": "eafa"
     },
     {
       "commentid": 10,
       "questionid": 23,
       "userid": 9,
       "comment": "JSX and ES6 offer significant advantages in web development, including improved readability and more powerful syntax.",
-      "created": "2024-01-23"
+      "created": "2024-01-23",
+      "id": "35af"
     },
     {
-      "id": 11,
+      "id": "11",
       "questionid": 1,
       "userid": 11,
       "comment": "123",
       "created": "2024-07-11"
     },
     {
-      "id": 12,
+      "id": "12",
       "questionid": 3,
       "userid": 12,
       "comment": "ádasd",
       "created": "2024-07-11"
     },
     {
-      "id": 13,
+      "id": "13",
       "comment": "Huy Tâm",
       "edited": "2024-07-11"
     },
     {
-      "id": 14,
+      "id": "14",
       "comment": "Tuyet voi aa",
       "edited": "2024-07-11"
     },
     {
-      "id": 15,
+      "id": "15",
       "questionid": 1,
       "userid": 12,
       "comment": "ád",
       "created": "2024-07-11"
     },
     {
-      "id": 16,
+      "id": "16",
       "questionid": 1,
       "userid": 12,
       "comment": "ádasd",
       "created": "2024-07-11"
     },
     {
-      "id": 17,
+      "id": "17",
       "questionid": 1,
       "userid": 12,
       "comment": "huy Tam",
+      "created": "2024-07-11"
+    },
+    {
+      "id": 18,
+      "questionid": 1,
+      "userid": "12",
+      "comment": "fa",
       "created": "2024-07-11"
     }
   ],
   "groups": [
     {
       "groupid": 1,
-      "name": "Group 1"
+      "name": "Group 1",
+      "id": "b221"
     },
     {
       "groupid": 2,
-      "name": "Group 2"
+      "name": "Group 2",
+      "id": "259e"
     },
     {
       "groupid": 3,
-      "name": "Group 3"
+      "name": "Group 3",
+      "id": "d7ef"
     }
   ]
 }
