@@ -49,7 +49,7 @@
 
 //     fetchData();
 //   }, []);
-  
+
 //    // Fetch subject data on component mount
 //   useEffect(() => {
 //     const fetchData = async () => {
@@ -86,7 +86,6 @@
 //       console.error('Error fetching questions:', error);
 //     }
 //   };
-
 
 //   // Function to find a user by username
 //   const findUserByUsername = (username) => {
@@ -141,15 +140,15 @@
 // export default UserProvider;
 
 // src/context/UserContext.js
-import React, { createContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(() => {
-    const savedUser = localStorage.getItem('currentUser');
+    const savedUser = localStorage.getItem("currentUser");
     return savedUser ? JSON.parse(savedUser) : null;
   });
   const [semesters, setSemesters] = useState([]);
@@ -157,14 +156,14 @@ const UserProvider = ({ children }) => {
   const [slots, setSlots] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [comments, setComments] = useState([]);
-
-  const API_URL = 'http://localhost:9999/users'; // Adjust as per your API configuration
-  const SEMESTER_URL = 'http://localhost:9999/semesters';
-  const SUBJECT_URL = 'http://localhost:9999/subjects';
-  const SLOT_URL = 'http://localhost:9999/slots';
-  const QUESTION_URL = 'http://localhost:9999/questions';
-  const COMMENT_URL='http://localhost:9999/comments';
-
+  const [groups, setGroups] = useState([]);
+  const API_URL = "http://localhost:9999/users"; // Adjust as per your API configuration
+  const SEMESTER_URL = "http://localhost:9999/semesters";
+  const SUBJECT_URL = "http://localhost:9999/subjects";
+  const SLOT_URL = "http://localhost:9999/slots";
+  const QUESTION_URL = "http://localhost:9999/questions";
+  const COMMENT_URL = "http://localhost:9999/comments";
+  const GROUP_URL = "http://localhost:9999/groups";
   // Fetch users data on component mount
   useEffect(() => {
     const fetchData = async () => {
@@ -172,7 +171,7 @@ const UserProvider = ({ children }) => {
         const response = await axios.get(API_URL);
         setUsers(response.data);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
       }
     };
 
@@ -186,7 +185,7 @@ const UserProvider = ({ children }) => {
         const response = await axios.get(SEMESTER_URL);
         setSemesters(response.data);
       } catch (error) {
-        console.error('Error fetching semesters:', error);
+        console.error("Error fetching semesters:", error);
       }
     };
 
@@ -200,7 +199,7 @@ const UserProvider = ({ children }) => {
         const response = await axios.get(SUBJECT_URL);
         setSubjects(response.data);
       } catch (error) {
-        console.error('Error fetching subjects:', error);
+        console.error("Error fetching subjects:", error);
       }
     };
 
@@ -214,7 +213,7 @@ const UserProvider = ({ children }) => {
         const response = await axios.get(SLOT_URL);
         setSlots(response.data);
       } catch (error) {
-        console.error('Error fetching slots:', error);
+        console.error("Error fetching slots:", error);
       }
     };
 
@@ -228,7 +227,7 @@ const UserProvider = ({ children }) => {
         const response = await axios.get(QUESTION_URL);
         setQuestions(response.data);
       } catch (error) {
-        console.error('Error fetching questions:', error);
+        console.error("Error fetching questions:", error);
       }
     };
 
@@ -242,29 +241,41 @@ const UserProvider = ({ children }) => {
         const response = await axios.get(COMMENT_URL);
         setComments(response.data);
       } catch (error) {
-        console.error('Error fetching comments:', error);
+        console.error("Error fetching comments:", error);
       }
     };
 
     fetchData();
   }, []);
+// Fetch group data on component mount
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(GROUP_URL);
+      setGroups(response.data);
+    } catch (error) {
+      console.error("Error fetching groups:", error);
+    }
+  };
 
-
+  fetchData();
+}, []);
   //Function to get username by id
   const getUserNameById = (id) => {
-    const user = users.find(user => user.id === id);
-    return user ? user.username : '';
+    const user = users.find((user) => user.id === id);
+    return user ? user.username : "";
   };
 
   // Function to find a user by username
   const findUserByUsername = (username) => {
-    return users.find(user => user.username === username);
+    return users.find((user) => user.username === username);
   };
-
 
   // Function to checking login
   const checkLogin = (username, password) => {
-    return users.some(user => user.username === username && user.password === password);
+    return users.some(
+      (user) => user.username === username && user.password === password
+    );
   };
 
   // Function to add a new user
@@ -273,18 +284,35 @@ const UserProvider = ({ children }) => {
       // Assuming newUser is an object with username and password
       const response = await axios.post(API_URL, {
         id: users.length + 1,
-        ...newUser
+        ...newUser,
       });
-      alert('User added successfully');
+      alert("User added successfully");
       setUsers([...users, response.data]); // Update local state
-      console.log('User added successfully:', response.data);
-      console.log('User List', users);
+      console.log("User added successfully:", response.data);
+      console.log("User List", users);
     } catch (error) {
-      console.error('Error adding user:', error);
+      console.error("Error adding user:", error);
+    }
+  };
+  const addComment = async (newComment) => {
+    try {
+      // Assuming newComment is an object with username and password
+      const response = await axios.post(COMMENT_URL, {
+        id: comments.length + 1,
+        ...newComment,
+      });
+      alert("Comment added successfully");
+      setComments([...comments, response.data]); // Update local state
+      console.log("Comment added successfully:", response.data);
+      console.log("Comment List", comments);
+    } catch (error) {
+      console.error("Error adding comment:", error);
     }
   };
 
-  useEffect(() => { localStorage.setItem('currentUser', JSON.stringify(currentUser)); }, [currentUser]);
+  useEffect(() => {
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  }, [currentUser]);
 
   // Context value object
   const contextValue = {
@@ -297,17 +325,18 @@ const UserProvider = ({ children }) => {
     semesters,
     subjects,
     slots,
+    groups,
     questions,
     comments,
     setComments,
-    getUserNameById
+    getUserNameById,
+    addComment
+    
     // Add other state and functions as needed
   };
 
   return (
-    <UserContext.Provider value={contextValue}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
 };
 

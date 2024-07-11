@@ -2,11 +2,10 @@ import React, { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import { Card, Row, Col, Form, Button, ListGroup, Dropdown, DropdownButton } from "react-bootstrap";
-import NavBar from "../components/NavBar";
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
-  const { questions, users, currentUser, comments, setComments, getUserNameById } = useContext(UserContext);
+  const { questions, users, currentUser, comments, setComments, getUserNameById,groups } = useContext(UserContext);
   const [comment, setComment] = useState("");
   // const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
@@ -99,10 +98,10 @@ const QuestionForSlot = () => {
             ))}
           </ListGroup>
           <DropdownButton id="dropdown-basic-button" title="Select Group" onSelect={handleSelectGroup} className="mt-3">
-            {users.map((user, index) => (
-              <Dropdown.Item key={index} eventKey={user.username}>
-                {user.username}
-              </Dropdown.Item>
+            {groups.map((group, index) => (
+              <Dropdown.Item key={index} eventKey={group.name}>
+              {group.name}
+            </Dropdown.Item>
             ))}
           </DropdownButton>
           {selectedGroup && <h4 className="mt-3">Group: {selectedGroup}</h4>}

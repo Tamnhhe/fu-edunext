@@ -1,5 +1,4 @@
 import React,{ useContext } from 'react';
-import NavBar from '../components/NavBar';
 import { UserContext } from '../context/UserContext'; // Import UserContext
 import { Navigate } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
