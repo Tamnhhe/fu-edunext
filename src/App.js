@@ -61,6 +61,7 @@ import QuestionForSlot from './components/QuestionForSlot'; // Import QuestionFo
 import UserProvider from './context/UserContext'; // Import UserProvider
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import UpcomingSlot from './page/UpcomingSlot';
 
 const App = () => {
   return (
@@ -92,6 +93,7 @@ const Main = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterForm />} />
+            <Route path="/upcoming-slot" element={<UpcomingSlot/>} />
             <Route path="/assignment" element={<Assignment />} />
             <Route path="/subject/:id" element={<SubjectDetail />} />
             <Route path="/subject/:id/slot/:slotid/question/:questionid" element={<QuestionForSlot />} />
