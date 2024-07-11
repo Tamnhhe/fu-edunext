@@ -5,15 +5,8 @@ import { Card, Row, Col, Form, Button, ListGroup, Dropdown, DropdownButton } fro
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
-  const { questions, users, currentUser, comments, setComments, getUserNameById, addComment } = useContext(UserContext);
-  const [answer, setAnswer] = useState("");
-  const [comment, setComment] = useState({
-    questionid: parseInt(questionid),
-    userid: currentUser ? currentUser.id : null,
-    comment: '',
-    date: new Date().toISOString().slice(0, 10),
-  });
-
+  const { questions, users, currentUser, comments, setComments, getUserNameById,groups } = useContext(UserContext);
+  const [comment, setComment] = useState("");
   // const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
   const navigate = useNavigate();
@@ -30,23 +23,13 @@ const QuestionForSlot = () => {
   );
 
   // Handle comment submission
-
-  const handleCommentSubmit = (e) => {
-    console.log("Answer:", answer);
-    e.preventDefault();
-    if (answer) {
-      const newComment = {
-        questionid: parseInt(questionid),
-        userid: currentUser.id,
-        comment: answer,
-        date: new Date().toISOString().slice(0, 10),
-      };
-      console.log(newComment);
-
-      addComment(newComment);
-    }
-  };
-
+  // const handleCommentSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (comment) {
+  //     setComments([...comments, { text: comment, user: currentUser }]); // Replace 1 with the current user id
+  //     setComment("");
+  //   }
+  // };
 
   // Handle group selection
   const handleSelectGroup = (group) => {
@@ -87,8 +70,8 @@ const QuestionForSlot = () => {
                     <Form.Control
                       type="text"
                       placeholder="Enter your answer"
-                      value={answer}
-                      onChange={(e) => setAnswer(e.target.value)}
+                      value={comment}
+                      onChange={(e) => setComment(e.target.value)}
                     />
                   </Form.Group>
                   <Button variant="primary" type="submit" className="mt-2">
