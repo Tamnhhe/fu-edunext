@@ -3,8 +3,11 @@ import { UserContext } from "../context/UserContext";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import ClassIcon from '@mui/icons-material/Class';
-import SubjectIcon from '@mui/icons-material/Subject';
+import ClassIcon from "@mui/icons-material/Class";
+import SubjectIcon from "@mui/icons-material/Subject";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+
 function SubjectList() {
   const { subjects, semesters } = useContext(UserContext);
   // console.log(subjects)
@@ -22,9 +25,10 @@ function SubjectList() {
             <Card.Title>{subject.subtitle}</Card.Title>
             <Card.Text className="flex-grow-1">
               <Col key={subject.subjectid}>
-                <div> 
-                  <SubjectIcon style={{ marginRight: "8px" }}/>
-                  {subject.subname}</div>
+                <div>
+                  <SubjectIcon style={{ marginRight: "8px" }} />
+                  {subject.subname}
+                </div>
               </Col>
               <Card.Text className="d-flex align-items-center">
                 <ClassIcon style={{ marginRight: "8px" }} />
@@ -32,16 +36,22 @@ function SubjectList() {
               </Card.Text>
             </Card.Text>
             <Card.Text className="flex-grow-1">
-              <Col >
+              <Col>
                 {/* Ensure there is at least one item in filterSemeter */}
                 {filterSemeter.length > 0 ? (
-                  <div> Start Date: {filterSemeter[0].startdate}</div>
+                  <div>
+                    <AccessTimeIcon style={{ marginRight: "8px" }} />
+                    Start Date: {filterSemeter[0].startdate}
+                  </div>
                 ) : (
                   <div>No start date available</div>
                 )}
                 {/* Ensure there is at least one item in filterSemeter */}
                 {filterSemeter.length > 0 ? (
-                  <div> End Date: {filterSemeter[0].enddate}</div>
+                  <div>
+                    <AccessTimeFilledIcon style={{ marginRight: "8px" }} /> End Date:{" "}
+                    {filterSemeter[0].enddate}
+                  </div>
                 ) : (
                   <div>No start date available</div>
                 )}
