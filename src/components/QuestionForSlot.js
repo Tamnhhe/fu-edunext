@@ -6,11 +6,12 @@ import NavBar from "../components/NavBar";
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
-  const { questions, users, currentUser } = useContext(UserContext);
+  const { questions, users, currentUser, comments, setComments, getUserNameById } = useContext(UserContext);
   const [comment, setComment] = useState("");
-  const [comments, setComments] = useState([]);
+  // const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
   const navigate = useNavigate();
+  const filterComment = comments.filter(comment => comment.questionid === parseInt(questionid));
 
   // Find the specific question based on questionid, slotid, and subjectid
   const question = questions.find(
@@ -41,6 +42,10 @@ const QuestionForSlot = () => {
     navigate(`/subject/${id}/slot/${slotid}/question/${questionId}`);
   };
 
+  const getUserName = (id) => {
+    return getUserNameById(id);
+  };
+
   return (
     <div>
       {/* <NavBar /> */}
@@ -69,9 +74,9 @@ const QuestionForSlot = () => {
                   </Button>
                 </Form>
                 <ListGroup className="mt-3">
-                  {comments.map((comment, idx) => (
+                  {filterComment.map((comment, idx) => (
                     <ListGroup.Item key={idx}>
-                      <strong>{comment.user.username}:</strong> {comment.text}
+                      <strong> {getUserNameById(comment.userid)}</strong> {comment.comment}
                     </ListGroup.Item>
                   ))}
                 </ListGroup>
