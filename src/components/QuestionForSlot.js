@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import { Card, Row, Col, Form, Button, ListGroup, Dropdown, DropdownButton } from "react-bootstrap";
+import CommentList from "../components/CommentList";
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
-  const { questions, users, currentUser, comments, setComments, getUserNameById,groups } = useContext(UserContext);
+  const { questions, users, currentUser, comments, setComments, getUserNameById,groups, addComment } = useContext(UserContext);
+  const [answer, setAnswer] = useState("");
   const [comment, setComment] = useState("");
   // const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
@@ -22,15 +24,6 @@ const QuestionForSlot = () => {
     question => question.slotid === parseInt(slotid) && question.subjectid === parseInt(id)
   );
 
-  // Handle comment submission
-  // const handleCommentSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (comment) {
-  //     setComments([...comments, { text: comment, user: currentUser }]); // Replace 1 with the current user id
-  //     setComment("");
-  //   }
-  // };
-
   // Handle group selection
   const handleSelectGroup = (group) => {
     setSelectedGroup(group);
@@ -40,15 +33,22 @@ const QuestionForSlot = () => {
   const handleSelectQuestion = (questionId) => {
     navigate(`/subject/${id}/slot/${slotid}/question/${questionId}`);
   };
+
+
+  // Handle comment submission
   const handleCommentSubmit = (e) => {
+    console.log("Answer:", answer);
     e.preventDefault();
-    if (comment) {
-      setComments([...comments, { comment: comment, userid: currentUser.id }]); // Replace 1 with the current user id
-      setComment("");
+    if (answer) {
+      const newComment = {
+        questionid: parseInt(questionid),
+        userid: currentUser.id,
+        comment: answer,
+        created: new Date().toISOString().slice(0, 10),
+      };
+      console.log(newComment);
+      addComment(newComment);
     }
-  }
-  const getUserName = (id) => {
-    return getUserNameById(id);
   };
 
   return (
@@ -70,24 +70,26 @@ const QuestionForSlot = () => {
                     <Form.Control
                       type="text"
                       placeholder="Enter your answer"
-                      value={comment}
-                      onChange={(e) => setComment(e.target.value)}
+                      value={answer}
+                      onChange={(e) => setAnswer(e.target.value)}
                     />
                   </Form.Group>
                   <Button variant="primary" type="submit" className="mt-2">
                     Submit
                   </Button>
                 </Form>
-                <ListGroup className="mt-3">
+                {/* <ListGroup className="mt-3">
                   {filterComment.map((comment, idx) => (
                     <ListGroup.Item key={idx}>
                       <strong> {getUserNameById(comment.userid)}</strong> {comment.comment}
                     </ListGroup.Item>
                   ))}
-                </ListGroup>
+                </ListGroup> */}
               </Card.Body>
             </Card>
           )}
+
+          <CommentList questionId={parseInt(questionid)} />
         </Col>
         <Col md={3}>
           <h5>Related Questions</h5>

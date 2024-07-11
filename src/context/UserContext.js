@@ -293,9 +293,10 @@ const UserProvider = ({ children }) => {
       console.error("Error adding user:", error);
     }
   };
+
+  //Function to add comment
   const addComment = async (newComment) => {
     try {
-      // Assuming newComment is an object with username and password
       const response = await axios.post(COMMENT_URL, {
         id: comments.length + 1,
         ...newComment,

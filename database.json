@@ -579,6 +579,13 @@
       "userid": 9,
       "comment": "JSX and ES6 offer significant advantages in web development, including improved readability and more powerful syntax.",
       "created": "2024-01-23"
+    },
+    {
+      "id": 11,
+      "questionid": 1,
+      "userid": 11,
+      "comment": "123",
+      "created": "2024-07-11"
     }
   ],
   "groups": [
