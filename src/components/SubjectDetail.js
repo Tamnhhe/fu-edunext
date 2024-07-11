@@ -38,7 +38,7 @@ const SubjectDetail = () => {
                     {filterQuestion.filter(question => question.slotid === slot.slotid).map((question, qIndex) => (
                       <Card.Text key={qIndex}>
                         <Link to={`/subject/${id}/slot/${slot.slotid}/question/${question.questionid}`}>
-                          {question.orderid}. {question.title}
+                          Question {question.orderid}: {question.title}
                         </Link>
                       </Card.Text>
                     ))}
