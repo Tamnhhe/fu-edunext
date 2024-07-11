@@ -18,8 +18,12 @@ const NavBar = () => {
   const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
-    navigate(path);
+  const handleNavigation = (path, external) => {
+    if (external) {
+      window.open(path, "_blank");
+    } else {
+      navigate(path);
+    }
   };
 
   return (
@@ -51,7 +55,8 @@ const NavBar = () => {
           {
             text: "Read user guide",
             icon: <PictureAsPdfIcon />,
-            path: "/user-guide",
+            path: "https://drive.google.com/uc?export=view&id=1Z2AL5snwR--kUPE6YFddw9pv9UxZ93K2",
+            external: true,
           },
           {
             text: "Contact Support",
@@ -67,14 +72,13 @@ const NavBar = () => {
           <ListItem
             button
             key={item.text}
-            onClick={() => handleNavigation(item.path)}
+            onClick={() => handleNavigation(item.path, item.external)}
           >
             <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText primary={item.text} />
           </ListItem>
         ))}
       </List>
-      
     </ListGroup>
   );
 };
