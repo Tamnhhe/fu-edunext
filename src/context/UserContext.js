@@ -301,6 +301,12 @@ const UserProvider = ({ children }) => {
     return subject ? subject.subname : "";
   };
 
+  // Function get semesterid by subjectid
+  const getSemesterIdBySubjectId = (id) => {
+    const subject = subjects.find((subject) => subject.subjectid  ===  id);
+    return subject ? subject.semesterid : "";
+  } 
+
   // Function to add a new user
   const addUser = async (newUser) => {
     try {
@@ -356,7 +362,8 @@ const UserProvider = ({ children }) => {
     getUserNameById,
     addComment,
     assignments,
-    getSubjectNameById
+    getSubjectNameById,
+    getSemesterIdBySubjectId
     // Add other state and functions as needed
   };
 

@@ -71,3 +71,12 @@
     100% { background-position: 0 0; }
 }
   
+.card-hover {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }

@@ -1,11 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../context/UserContext';
 import { Card, Container, Row, Col, ButtonGroup, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 function UpcomingSlot() {
-  const { slots, getSubjectNameById } = useContext(UserContext);
+  const { slots, getSubjectNameById} = useContext(UserContext);
   const today = new Date();
   const [filterType, setFilterType] = useState('all');
 
+  const navigate = useNavigate();
+
+  const handleCardClick = (subjectid, slotid) => {
+    const path = `subject/${subjectid}/slot/${slotid}`;
+    navigate(`/${path}`);
+  };
 
   const filterSlots = (type) => {
     switch (type) {
@@ -64,7 +71,7 @@ function UpcomingSlot() {
       <Row>
         {filteredSlots.map(slot => (
           <Col key={slot.slotid} md={4} className="mb-4">
-            <Card>
+            <Card className="card-hover" onClick={() => handleCardClick(slot.subjectid, slot.slotid)}>
               <Card.Body>
                 <Card.Title>{getSubjectNameById(slot.subjectid)}</Card.Title>
                 <Card.Text>{slot.name}</Card.Text>
