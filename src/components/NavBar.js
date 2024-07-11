@@ -12,7 +12,7 @@ import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { UserContext } from "../context/UserContext";
 import { Navigate } from "react-router-dom";
-import { ListGroup } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 import FAQsModal from "./FAQsModal";
 import ContactSupportModal from "./ContactSupportModal";
 
@@ -29,6 +29,10 @@ const NavBar = () => {
       navigate(path);
     }
   };
+  const handleLogout = () => {
+    // Perform any logout actions if needed
+    navigate("/login");
+  };
 
   return (
     <ListGroup>
@@ -39,7 +43,6 @@ const NavBar = () => {
         {currentUser ? (
           <div className="welcome">
             <span>Welcome, {currentUser.username} </span>
-            <a href="/login">Logout</a>
           </div>
         ) : (
           <Navigate to="/login" />
@@ -78,6 +81,9 @@ const NavBar = () => {
         show={contactModalShow}
         onHide={() => setContactModalShow(false)}
       />
+      <Button variant="primary"  onClick={handleLogout}>
+        Logout
+      </Button>
     </ListGroup>
   );
 };

@@ -108,7 +108,7 @@ const QuestionForSlot = () => {
           <DropdownButton id="dropdown-basic-button" title="Select Group" onSelect={handleSelectGroup} className="mt-3">
             {groups.map((group, index) => (
               <Dropdown.Item key={index} eventKey={group.name}>
-              {group. name}
+              {group.name}
             </Dropdown.Item>
             ))}
           </DropdownButton>
