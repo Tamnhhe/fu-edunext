@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -13,15 +13,53 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { UserContext } from "../context/UserContext";
 import { Navigate } from "react-router-dom";
 import { ListGroup } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+const MyVerticallyCenteredModal = (props) => {
+  const handleClick = () => {
+    window.open('https://www.facebook.com/Tamnhhe', '_blank');
+};
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Contact Support
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Support Information</h4>
+        <p>
+          If you have any issues or questions, please reach out to our support team.
+          You can contact us via email at Tamnhhe@gmail.com or call us at 0369994876.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+      <Button  onClick={handleClick}>Contact</Button>
+        <Button  variant="secondary" onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+};
 
 const NavBar = () => {
   const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
+  const [modalShow, setModalShow] = useState(false);
 
-  const handleNavigation = (path) => {
-    navigate(path);
+  const handleNavigation = (path, external) => {
+    if (external) {
+      window.open(path, "_blank");
+    } else {
+      navigate(path);
+    }
   };
-
+  
   return (
     <ListGroup>
       <List>
@@ -38,43 +76,34 @@ const NavBar = () => {
         )}
         {[
           { text: "Home", icon: <HomeIcon />, path: "/home" },
-          {
-            text: "Assignments",
-            icon: <AssignmentIcon />,
-            path: "/assignment",
-          },
-          {
-            text: "Upcoming slots",
-            icon: <EventIcon />,
-            path: "/upcoming-slot",
-          },
+          { text: "Assignments", icon: <AssignmentIcon />, path: "/assignment" },
+          { text: "Upcoming slots", icon: <EventIcon />, path: "/upcoming-slot" },
           {
             text: "Read user guide",
             icon: <PictureAsPdfIcon />,
-            path: "/user-guide",
+            path: "https://drive.google.com/uc?export=view&id=1Z2AL5snwR--kUPE6YFddw9pv9UxZ93K2",
+            external: true,
           },
-          {
-            text: "Contact Support",
-            icon: <HeadsetMicIcon />,
-            path: "/contact-support",
-          },
-          {
-            text: "Frequently Asked Questions",
-            icon: <HelpOutlineIcon />,
-            path: "/faq",
-          },
+          { text: "Frequently Asked Questions", icon: <HelpOutlineIcon />, path: "/faq" },
         ].map((item) => (
           <ListItem
             button
             key={item.text}
-            onClick={() => handleNavigation(item.path)}
+            onClick={() => handleNavigation(item.path, item.external)}
           >
             <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText primary={item.text} />
           </ListItem>
         ))}
+        <ListItem button onClick={() => setModalShow(true)}>
+          <ListItemIcon><HeadsetMicIcon /></ListItemIcon>
+          <ListItemText primary="Contact Support" />
+        </ListItem>
       </List>
-      
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </ListGroup>
   );
 };
