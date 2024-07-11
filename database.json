@@ -93,6 +93,32 @@
       "enddate": "2024-12-01"
     }
   ],
+  "subjects": [
+    {
+      "subjectid": 1,
+      "subname": "ITE302c",
+      "subtitle": "Information Technology Ethical",
+      "semesterid": 1
+    },
+    {
+      "subjectid": 2,
+      "subname": "SWR302",
+      "subtitle": "Software Requirements Engineering",
+      "semesterid": 1
+    },
+    {
+      "subjectid": 3,
+      "subname": "FER202",
+      "subtitle": "Front-end Development With React",
+      "semesterid": 1
+    },
+    {
+      "subjectid": 4,
+      "subname": "SWP391",
+      "subtitle": "Software Project Management",
+      "semesterid": 1
+    }
+  ],
   "slots": [
     {
       "slotid": 1,

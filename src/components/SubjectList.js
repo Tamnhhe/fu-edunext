@@ -10,7 +10,7 @@ import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 
 function SubjectList() {
   const { subjects, semesters } = useContext(UserContext);
-  // console.log(subjects)
+  console.log("SubjectList", subjects);
   const filterSemeter = semesters.filter((item) => item.semesterid == 2);
 
   console.log(filterSemeter);
