@@ -54,6 +54,10 @@ const LoginForm = ({ onSubmit }) => {
     <Row className="justify-content-md-center mt-5">
       <Col md={6}>
         <Form onSubmit={handleSubmit}>
+          <div style={{width: '200px',alignItems: 'center',justifyContent: 'center'}} >
+          <img src='/assets/logo-home.png' alt="Logo" className="logo " />
+          </div>
+          
           <h3 className="text-center mb-4">Login</h3>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
