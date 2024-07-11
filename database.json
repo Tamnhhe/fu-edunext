@@ -580,5 +580,19 @@
       "comment": "JSX and ES6 offer significant advantages in web development, including improved readability and more powerful syntax.",
       "created": "2024-01-23"
     }
+  ],
+  "groups": [
+    {
+      "groupid": 1,
+      "name": "Group 1"
+    },
+    {
+      "groupid": 2,
+      "name": "Group 2"
+    },
+    {
+      "groupid": 3,
+      "name": "Group 3"
+    }
   ]
 }

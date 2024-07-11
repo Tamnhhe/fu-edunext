@@ -17,8 +17,8 @@ function Assignment() {
   return (
     <div>
       <Row>
-      <Col md={2}><NavBar /> </Col>
-      <Col md={10}>
+      
+      <Col>
         <Row>
           <Col md={12} className='text-center mt-4'><h1>My Assignment</h1>
           
