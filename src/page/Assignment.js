@@ -47,7 +47,13 @@ function Assignment() {
 
                 <Card.Text>Slot {assignment.slotid}</Card.Text>
 
-                <Card.Title>   <SubjectIcon style={{ marginRight: "8px" }} /> {getSubjectNameById(assignment.subjectid)}</Card.Title>
+                <Card.Title>   <SubjectIcon style={{ marginRight: "8px" }} /> 
+                
+                <span style={{ color: "green" }}>
+                {getSubjectNameById(assignment.subjectid)}
+              </span>
+                
+                </Card.Title>
                 
              
 
@@ -58,7 +64,7 @@ function Assignment() {
                
                 <Card.Text> <AccessTimeIcon style={{ marginRight: "8px" }} />  Due Date: {new Date(assignment.duedate).toLocaleDateString()}</Card.Text>
             
-                <Link to={`/subject/${assignment.subjectid}/slot/${assignment.slotid}/question/${assignment.questionid}`} className="btn btn-primary">
+                <Link to={`/subject/${assignment.subjectid}/slot/${assignment.slotid}/question/${assignment.orid}`} className="btn btn-primary">
                   View assignment
                 </Link>
 
