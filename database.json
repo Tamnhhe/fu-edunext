@@ -151,7 +151,7 @@
     {
       "slotid": 5,
       "title": "Communicate the Business Impacts of Ethical Risks to Diverse Stakeholders",
-      "startdate": "2024-07-01",
+      "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 1
     },
@@ -186,7 +186,7 @@
     {
       "slotid": 10,
       "title": "Requirements elicitation",
-      "startdate": "2024-07-01",
+      "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 2
     },
@@ -221,7 +221,7 @@
     {
       "slotid": 15,
       "title": "Bootstrap JavaScript Components",
-      "startdate": "2024-07-01",
+      "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 3
     },
@@ -256,7 +256,7 @@
     {
       "slotid": 20,
       "title": "Practice: design, code, self-test, integrate",
-      "startdate": "2024-07-01",
+      "startdate": "2024-07-20",
       "enddate": "2024-07-30",
       "subjectid": 4
     }
