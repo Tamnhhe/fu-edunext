@@ -247,19 +247,19 @@ const UserProvider = ({ children }) => {
 
     fetchData();
   }, []);
-// Fetch group data on component mount
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(GROUP_URL);
-      setGroups(response.data);
-    } catch (error) {
-      console.error("Error fetching groups:", error);
-    }
-  };
+  // Fetch group data on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(GROUP_URL);
+        setGroups(response.data);
+      } catch (error) {
+        console.error("Error fetching groups:", error);
+      }
+    };
 
-  fetchData();
-}, []);
+    fetchData();
+  }, []);
   //Function to get username by id
   const getUserNameById = (id) => {
     const user = users.find((user) => user.id === id);
@@ -277,7 +277,6 @@ useEffect(() => {
       (user) => user.username === username && user.password === password
     );
   };
-
   // Function to add a new user
   const addUser = async (newUser) => {
     try {
@@ -330,8 +329,8 @@ useEffect(() => {
     comments,
     setComments,
     getUserNameById,
-    addComment
-    
+    addComment,
+
     // Add other state and functions as needed
   };
 

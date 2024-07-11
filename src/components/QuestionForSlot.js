@@ -23,13 +23,13 @@ const QuestionForSlot = () => {
   );
 
   // Handle comment submission
-  const handleCommentSubmit = (e) => {
-    e.preventDefault();
-    if (comment) {
-      setComments([...comments, { text: comment, user: currentUser }]); // Replace 1 with the current user id
-      setComment("");
-    }
-  };
+  // const handleCommentSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (comment) {
+  //     setComments([...comments, { text: comment, user: currentUser }]); // Replace 1 with the current user id
+  //     setComment("");
+  //   }
+  // };
 
   // Handle group selection
   const handleSelectGroup = (group) => {
@@ -40,7 +40,13 @@ const QuestionForSlot = () => {
   const handleSelectQuestion = (questionId) => {
     navigate(`/subject/${id}/slot/${slotid}/question/${questionId}`);
   };
-
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+    if (comment) {
+      setComments([...comments, { comment: comment, userid: currentUser.id }]); // Replace 1 with the current user id
+      setComment("");
+    }
+  }
   const getUserName = (id) => {
     return getUserNameById(id);
   };
@@ -100,7 +106,7 @@ const QuestionForSlot = () => {
           <DropdownButton id="dropdown-basic-button" title="Select Group" onSelect={handleSelectGroup} className="mt-3">
             {groups.map((group, index) => (
               <Dropdown.Item key={index} eventKey={group.name}>
-              {group.name}
+              {group. name}
             </Dropdown.Item>
             ))}
           </DropdownButton>
