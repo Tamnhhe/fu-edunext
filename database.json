@@ -625,6 +625,13 @@
       "userid": 12,
       "comment": "ádasd",
       "created": "2024-07-11"
+    },
+    {
+      "id": 17,
+      "questionid": 1,
+      "userid": 12,
+      "comment": "huy Tam",
+      "created": "2024-07-11"
     }
   ],
   "groups": [
