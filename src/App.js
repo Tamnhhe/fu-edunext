@@ -97,7 +97,7 @@ const Main = () => {
             <Route path="/assignment" element={<Assignment />} />
             <Route path="/subject/:id" element={<SubjectDetail />} />
             <Route path="/subject/:id/slot/:slotid" element={<SlotDetail />} />
-            <Route path="/subject/:id/slot/:slotid/question/:orderid" element={<QuestionForSlot />} />
+            <Route path="/subject/:id/slot/:slotid/question/:questionid" element={<QuestionForSlot />} />
           </Routes>
         </Col>
       </Row>
