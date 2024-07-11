@@ -55,7 +55,7 @@ const QuestionForSlot = () => {
     <div>
       {/* <NavBar /> */}
       <Row>
-        <Col md={9}>
+        <Col md={9} className="mt-5 mx-auto">
           <h3>Question Details</h3>
           {question && (
             <Card className="mb-4">
@@ -91,7 +91,7 @@ const QuestionForSlot = () => {
 
           <CommentList questionId={parseInt(questionid)} />
         </Col>
-        <Col md={3}>
+        <Col md={3} className="mt-5">
           <h5>Related Questions</h5>
           <ListGroup>
             {relatedQuestions.map((question, index) => (
