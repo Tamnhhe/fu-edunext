@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -26,13 +24,13 @@ const NavBar = () => {
 
   return (
     <ListGroup>
-      <List >
-        <div className="navbar" >
+      <List>
+        <div className="navbar">
           <img className="logo-home" src="/assets/logo-home.png" alt="logo" />
         </div>
         {currentUser ? (
           <div className="welcome">
-            <span>Welcome, {currentUser.username}  </span>
+            <span>Welcome, {currentUser.username} </span>
             <a href="/login">Logout</a>
           </div>
         ) : (
@@ -76,9 +74,9 @@ const NavBar = () => {
           </ListItem>
         ))}
       </List>
+      
     </ListGroup>
   );
 };
 
 export default NavBar;
-

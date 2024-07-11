@@ -81,16 +81,16 @@
       "enddate": "2024-05-01"
     },
     {
-      "semesterid": 1,
+      "semesterid": 2,
       "semestername": "SUMMER2024",
-      "startdate": "2024-01-01",
-      "enddate": "2024-05-01"
+      "startdate": "2024-05-02",
+      "enddate": "2024-09-01"
     },
     {
-      "semesterid": 1,
+      "semesterid": 3,
       "semestername": "FALL2024",
-      "startdate": "2024-01-01",
-      "enddate": "2024-05-01"
+      "startdate": "2024-09-02",
+      "enddate": "2024-12-01"
     }
   ],
   "subjects": [
@@ -586,6 +586,20 @@
       "userid": 11,
       "comment": "123",
       "date": "2024-07-11"
+    }
+  ],
+  "groups": [
+    {
+      "groupid": 1,
+      "name": "Group 1"
+    },
+    {
+      "groupid": 2,
+      "name": "Group 2"
+    },
+    {
+      "groupid": 3,
+      "name": "Group 3"
     }
   ]
 }

@@ -62,7 +62,6 @@ import UserProvider from './context/UserContext'; // Import UserProvider
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import UpcomingSlot from './page/UpcomingSlot';
-
 const App = () => {
   return (
     <UserProvider>

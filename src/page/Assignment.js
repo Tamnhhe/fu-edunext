@@ -1,9 +1,8 @@
 import React,{ useContext } from 'react';
-import NavBar from '../components/NavBar';
 import { UserContext } from '../context/UserContext'; // Import UserContext
 import { Navigate } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
-import SemesterDropdown from '../components/SemesterDropdown';
+import { Row, Col } from 'react-bootstrap';
+
 
 function Assignment() {
 
@@ -17,8 +16,8 @@ function Assignment() {
   return (
     <div>
       <Row>
-      <Col md={2}><NavBar /> </Col>
-      <Col md={10}>
+      
+      <Col>
         <Row>
           <Col md={12} className='text-center mt-4'><h1>My Assignment</h1>
           

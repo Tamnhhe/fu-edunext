@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import { Card, CardFooter, Row, Col } from "react-bootstrap";
-import NavBar from "../components/NavBar";
 import HeaderBar from "../components/HeaderBar";
 
 const SubjectDetail = () => {

@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import { Card, Row, Col, Form, Button, ListGroup, Dropdown, DropdownButton } from "react-bootstrap";
-import NavBar from "../components/NavBar";
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
@@ -14,6 +13,7 @@ const QuestionForSlot = () => {
     comment: '',
     date: new Date().toISOString().slice(0, 10),
   });
+
   // const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
   const navigate = useNavigate();
@@ -30,6 +30,7 @@ const QuestionForSlot = () => {
   );
 
   // Handle comment submission
+
   const handleCommentSubmit = (e) => {
     console.log("Answer:", answer);
     e.preventDefault();
@@ -46,6 +47,7 @@ const QuestionForSlot = () => {
     }
   };
 
+
   // Handle group selection
   const handleSelectGroup = (group) => {
     setSelectedGroup(group);
@@ -55,7 +57,13 @@ const QuestionForSlot = () => {
   const handleSelectQuestion = (questionId) => {
     navigate(`/subject/${id}/slot/${slotid}/question/${questionId}`);
   };
-
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+    if (comment) {
+      setComments([...comments, { comment: comment, userid: currentUser.id }]); // Replace 1 with the current user id
+      setComment("");
+    }
+  }
   const getUserName = (id) => {
     return getUserNameById(id);
   };
@@ -113,10 +121,10 @@ const QuestionForSlot = () => {
             ))}
           </ListGroup>
           <DropdownButton id="dropdown-basic-button" title="Select Group" onSelect={handleSelectGroup} className="mt-3">
-            {users.map((user, index) => (
-              <Dropdown.Item key={index} eventKey={user.username}>
-                {user.username}
-              </Dropdown.Item>
+            {groups.map((group, index) => (
+              <Dropdown.Item key={index} eventKey={group.name}>
+              {group. name}
+            </Dropdown.Item>
             ))}
           </DropdownButton>
           {selectedGroup && <h4 className="mt-3">Group: {selectedGroup}</h4>}
