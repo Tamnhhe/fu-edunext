@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
-  const { questions, users } = useContext(UserContext);
+  const { questions, users, currentUser } = useContext(UserContext);
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
@@ -26,7 +26,7 @@ const QuestionForSlot = () => {
   const handleCommentSubmit = (e) => {
     e.preventDefault();
     if (comment) {
-      setComments([...comments, { text: comment, user: users.find(user => user.id === 1) }]); // Replace 1 with the current user id
+      setComments([...comments, { text: comment, user: currentUser }]); // Replace 1 with the current user id
       setComment("");
     }
   };
