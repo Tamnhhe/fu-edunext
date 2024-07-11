@@ -511,74 +511,81 @@
   ],
   "comments": [
     {
-      "commentid": 1,
+      "id": 1,
       "questionid": 1,
       "userid": 1,
       "comment": "Great question, thanks!",
       "created": "2024-01-15"
     },
     {
-      "commentid": 2,
+      "id": 2,
       "questionid": 1,
       "userid": 3,
       "comment": "This question really makes me think about the ethical implications of technology. I believe an effective ethical framework should be comprehensive and adaptable.",
       "created": "2024-01-15"
     },
     {
-      "commentid": 3,
+      "id": 3,
       "questionid": 5,
       "userid": 2,
       "comment": "Detecting ethical risks is crucial for maintaining trust in technology. We should consider both technical and social aspects.",
       "created": "2024-01-16"
     },
     {
-      "commentid": 4,
+      "id": 4,
       "questionid": 7,
       "userid": 3,
       "comment": "Managing fairness and non-discrimination risks is essential for creating inclusive technologies. It's a challenging but necessary task.",
       "created": "2024-01-17"
     },
     {
-      "commentid": 5,
+      "id": 5,
       "questionid": 9,
       "userid": 4,
       "comment": "Ethical risks can severely impact a business's reputation. Companies must prioritize ethical considerations to build trust with their customers.",
       "created": "2024-01-18"
     },
     {
-      "commentid": 6,
+      "id": 6,
       "questionid": 11,
       "userid": 5,
       "comment": "Clear software requirements are the backbone of a successful project. Without them, projects can easily go off track.",
       "created": "2024-01-19"
     },
     {
-      "commentid": 7,
+      "id": 7,
       "questionid": 13,
       "userid": 6,
       "comment": "Integrating customer perspectives into software requirements ensures the final product meets user needs. It's a critical step.",
       "created": "2024-01-20"
     },
     {
-      "commentid": 8,
+      "id": 8,
       "questionid": 17,
       "userid": 7,
       "comment": "Establishing business requirements early on helps align the project goals with the company's objectives. It's a foundational step.",
       "created": "2024-01-21"
     },
     {
-      "commentid": 9,
+      "id": 9,
       "questionid": 6,
       "userid": 8,
       "comment": "Understanding the big picture in full stack web development helps developers create more cohesive and efficient applications.",
       "created": "2024-01-22"
     },
     {
-      "commentid": 10,
+      "id": 10,
       "questionid": 23,
       "userid": 9,
       "comment": "JSX and ES6 offer significant advantages in web development, including improved readability and more powerful syntax.",
       "created": "2024-01-23"
+    },
+    {
+      "id": 11,
+      "questionid": 1,
+      "userid": 11,
+      "comment": "123",
+      "date": "2024-07-11"
     }
   ],
   "groups": [

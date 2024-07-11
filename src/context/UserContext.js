@@ -309,9 +309,24 @@ const UserProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    localStorage.setItem("currentUser", JSON.stringify(currentUser));
-  }, [currentUser]);
+
+  //Function to add comment
+  const addComment = async (comment) => {
+    try {
+      const response = await axios.post(COMMENT_URL, {
+        id: comments.length + 1,
+        ...comment
+      });
+      setComments([...comments, response.data]); // Update local state
+      console.log('Comment added successfully:', response.data);
+      console.log('Comment List', comments);
+    } catch (error) {
+      console.error('Error adding comment:', error);
+    }
+  };
+
+  useEffect(() => { localStorage.setItem('currentUser', JSON.stringify(currentUser)); }, [currentUser]);
+
 
   // Context value object
   const contextValue = {
@@ -329,7 +344,7 @@ const UserProvider = ({ children }) => {
     comments,
     setComments,
     getUserNameById,
-    addComment,
+    addComment
 
     // Add other state and functions as needed
   };
