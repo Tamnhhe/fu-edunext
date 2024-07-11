@@ -47,7 +47,13 @@ function Assignment() {
 
                 <Card.Text>Slot {assignment.slotid}</Card.Text>
 
-                <Card.Title>   <SubjectIcon style={{ marginRight: "8px" }} /> {getSubjectNameById(assignment.subjectid)}</Card.Title>
+                <Card.Title>   <SubjectIcon style={{ marginRight: "8px" }} /> 
+                
+                <span style={{ color: "green" }}>
+                {getSubjectNameById(assignment.subjectid)}
+              </span>
+                
+                </Card.Title>
                 
              
 
