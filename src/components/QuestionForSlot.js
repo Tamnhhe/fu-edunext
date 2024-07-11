@@ -120,7 +120,6 @@
 // };
 
 // export default QuestionForSlot;
-
 import React, { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
@@ -128,45 +127,42 @@ import { Card, Row, Col, Form, Button, ListGroup, Dropdown, DropdownButton } fro
 import CommentList from "../components/CommentList";
 
 const QuestionForSlot = () => {
-  const { id, slotid, orderid } = useParams();
+  const { id, slotid, questionid } = useParams();
   const { questions, users, currentUser, comments, setComments, getUserNameById, groups, addComment } = useContext(UserContext);
   const [answer, setAnswer] = useState("");
+  const [comment, setComment] = useState("");
   const [selectedGroup, setSelectedGroup] = useState(null);
   const navigate = useNavigate();
+  const filterComment = comments.filter(comment => comment.questionid === parseInt(questionid));
 
-  // Find the specific question based on orderid, slotid, and subjectid
+  // Find the specific question based on questionid, slotid, and subjectid
   const question = questions.find(
-    question => question.slotid === parseInt(slotid) && question.subjectid === parseInt(id) && question.orderid === parseInt(orderid)
+    question => question.slotid === parseInt(slotid) && question.subjectid === parseInt(id) && question.questionid === parseInt(questionid)
   );
-
-  // Filter questions based on slot id and subject id
-  const relatedQuestions = questions.filter(
-    question => question.slotid === parseInt(slotid) && question.subjectid === parseInt(id)
-  );
-
-  // Handle group selection
-  const handleSelectGroup = (group) => {
-    setSelectedGroup(group);
-  };
 
   // Handle question selection from list group
-  const handleSelectQuestion = (orderid) => {
-    navigate(`/subject/${id}/slot/${slotid}/question/${orderid}`);
+  const handleSelectQuestion = (questionId) => {
+    navigate(`/subject/${id}/slot/${slotid}/question/${questionId}`);
   };
 
   // Handle comment submission
   const handleCommentSubmit = (e) => {
+    console.log("Answer:", answer);
     e.preventDefault();
     if (answer) {
       const newComment = {
-        questionid: question.questionid,
+        questionid: parseInt(questionid),
         userid: currentUser.id,
         comment: answer,
         created: new Date().toISOString().slice(0, 10),
       };
+      console.log(newComment);
       addComment(newComment);
-      setAnswer(""); // Clear the input after submission
     }
+  };
+
+  const handleSelectGroup = (group) => {
+    setSelectedGroup(group);
   };
 
   return (
@@ -175,45 +171,52 @@ const QuestionForSlot = () => {
         <Col md={9} className="mt-5 mx-auto">
           <h3>Question Details</h3>
           {question && (
-            <Card className="mb-4">
-              <Card.Header>
-                {question.orderid}. {question.title}
-              </Card.Header>
+            <Card>
               <Card.Body>
-                <Card.Text><strong>Description:</strong> {question.description}</Card.Text>
-                <Form onSubmit={handleCommentSubmit} className="mt-3">
-                  <Form.Group controlId={`comment-${question.questionid}`}>
-                    <Form.Label>Comment</Form.Label>
+                <Card.Title>{question.title}</Card.Title>
+                <Card.Text>{question.content}</Card.Text>
+                <Form onSubmit={handleCommentSubmit}>
+                  <Form.Group controlId="answer">
+                    <Form.Label>Answer</Form.Label>
                     <Form.Control
-                      type="text"
-                      placeholder="Enter your answer"
+                      as="textarea"
+                      rows={3}
                       value={answer}
                       onChange={(e) => setAnswer(e.target.value)}
                     />
                   </Form.Group>
-                  <Button variant="primary" type="submit" className="mt-2">
+                  <Button variant="primary" type="submit" className="mt-3">
                     Submit
                   </Button>
                 </Form>
+                <ListGroup className="mt-3">
+                  {filterComment.map((comment, idx) => (
+                    <ListGroup.Item key={idx}>
+                      <strong>{getUserNameById(comment.userid)}</strong> {comment.comment}
+                    </ListGroup.Item>
+                  ))}
+                </ListGroup>
               </Card.Body>
             </Card>
           )}
 
-          <CommentList questionId={question ? question.questionid : null} />
+          <CommentList questionId={parseInt(questionid)} />
         </Col>
         <Col md={3} className="mt-5">
           <h5>Related Questions</h5>
           <ListGroup>
-            {relatedQuestions.map((question, index) => (
-              <ListGroup.Item 
-                key={index} 
-                action 
-                onClick={() => handleSelectQuestion(question.orderid)}
-                active={question.orderid === parseInt(orderid)}
-              >
-                {question.orderid}. {question.title}
-              </ListGroup.Item>
-            ))}
+            {questions
+              .filter(q => q.slotid === parseInt(slotid) && q.subjectid === parseInt(id))
+              .map((question, index) => (
+                <ListGroup.Item
+                  key={index}
+                  action
+                  onClick={() => handleSelectQuestion(question.questionid)}
+                  active={question.questionid === parseInt(questionid)}
+                >
+                  {question.orderid}. {question.title}
+                </ListGroup.Item>
+              ))}
           </ListGroup>
           <DropdownButton id="dropdown-basic-button" title="Select Group" onSelect={handleSelectGroup} className="mt-3">
             {groups.map((group, index) => (
@@ -230,4 +233,3 @@ const QuestionForSlot = () => {
 };
 
 export default QuestionForSlot;
-
