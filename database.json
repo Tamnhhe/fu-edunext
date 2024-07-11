@@ -586,6 +586,20 @@
       "userid": 11,
       "comment": "123",
       "created": "2024-07-11"
+    },
+    {
+      "id": 12,
+      "questionid": 3,
+      "userid": 12,
+      "comment": "ádasd",
+      "created": "2024-07-11"
+    },
+    {
+      "id": 13,
+      "questionid": 1,
+      "userid": 12,
+      "comment": "Huy Tâm",
+      "created": "2024-07-11"
     }
   ],
   "groups": [
@@ -601,5 +615,5 @@
       "groupid": 3,
       "name": "Group 3"
     }
-  ]
+  ] 
 }
