@@ -3,6 +3,8 @@ import { UserContext } from "../context/UserContext";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import ClassIcon from '@mui/icons-material/Class';
+import SubjectIcon from '@mui/icons-material/Subject';
 function SubjectList() {
   const { subjects, semesters } = useContext(UserContext);
   // console.log(subjects)
@@ -20,8 +22,14 @@ function SubjectList() {
             <Card.Title>{subject.subtitle}</Card.Title>
             <Card.Text className="flex-grow-1">
               <Col key={subject.subjectid}>
-                <div>{subject.subname}</div>
+                <div> 
+                  <SubjectIcon style={{ marginRight: "8px" }}/>
+                  {subject.subname}</div>
               </Col>
+              <Card.Text className="d-flex align-items-center">
+                <ClassIcon style={{ marginRight: "8px" }} />
+                <div className="">SE1829-NJ</div>
+              </Card.Text>
             </Card.Text>
             <Card.Text className="flex-grow-1">
               <Col >
