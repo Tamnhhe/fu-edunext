@@ -485,6 +485,8 @@
       "subjectid": 1,
       "slotid": 1,
       "questionid": 1,
+      "assignmentTitle": "Assignment 1 Title",
+      "assignmentDescription": "This is the description for Assignment 1.",
       "duedate": "2024-01-15"
     },
     {
@@ -492,6 +494,8 @@
       "subjectid": 1,
       "slotid": 2,
       "questionid": 2,
+      "assignmentTitle": "Assignment 2 Title",
+      "assignmentDescription": "This is the description for Assignment 2.",
       "duedate": "2024-01-22"
     },
     {
@@ -499,6 +503,8 @@
       "subjectid": 2,
       "slotid": 6,
       "questionid": 6,
+      "assignmentTitle": "Assignment 3 Title",
+      "assignmentDescription": "This is the description for Assignment 3.",
       "duedate": "2024-01-15"
     },
     {
@@ -506,9 +512,12 @@
       "subjectid": 2,
       "slotid": 7,
       "questionid": 7,
+      "assignmentTitle": "Assignment 4 Title",
+      "assignmentDescription": "This is the description for Assignment 4.",
       "duedate": "2024-01-22"
     }
   ],
+  
   "comments": [
     {
       "commentid": 1,

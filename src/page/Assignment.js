@@ -1,31 +1,35 @@
 import React,{ useContext } from 'react';
 import { UserContext } from '../context/UserContext'; // Import UserContext
 import { Navigate } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
-
+import { Card, Container, Row, Col } from 'react-bootstrap';
 
 function Assignment() {
 
-  const { currentUser } = useContext(UserContext); // Access user from UserContext
+  const { currentUser, assignments } = useContext(UserContext); // Access user from UserContext
 
+  console.log(assignments);
   if (!currentUser) {
     console.log("Not logged in");
     return <Navigate to="/login" />;
   }
 
   return (
-    <div>
+    <Container>
+      <h1 className="my-4">Assignments</h1>
       <Row>
-      
-      <Col>
-        <Row>
-          <Col md={12} className='text-center mt-4'><h1>My Assignment</h1>
-          
+        {assignments.map(assignment => (
+          <Col key={assignment.assignmentid} md={4} className="mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>{assignment.assignmentTitle}</Card.Title>
+                <Card.Text>{assignment.assignmentDescription}</Card.Text>
+                <Card.Text>Due Date: {new Date(assignment.duedate).toLocaleDateString()}</Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
-        </Row>
-       </Col>
+        ))}
       </Row>
-    </div>
+    </Container>
   )
 }
 

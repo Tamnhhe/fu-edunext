@@ -157,6 +157,7 @@ const UserProvider = ({ children }) => {
   const [questions, setQuestions] = useState([]);
   const [comments, setComments] = useState([]);
   const [groups, setGroups] = useState([]);
+  const [assignments, setAssignments] = useState([]);
   const API_URL = "http://localhost:9999/users"; // Adjust as per your API configuration
   const SEMESTER_URL = "http://localhost:9999/semesters";
   const SUBJECT_URL = "http://localhost:9999/subjects";
@@ -164,6 +165,7 @@ const UserProvider = ({ children }) => {
   const QUESTION_URL = "http://localhost:9999/questions";
   const COMMENT_URL = "http://localhost:9999/comments";
   const GROUP_URL = "http://localhost:9999/groups";
+  const ASSIGNMENT_URL = "http://localhost:9999/assignments";
   // Fetch users data on component mount
   useEffect(() => {
     const fetchData = async () => {
@@ -260,6 +262,21 @@ const UserProvider = ({ children }) => {
 
     fetchData();
   }, []);
+
+  // Fetch assignment data on component mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(ASSIGNMENT_URL);
+        setAssignments(response.data);
+      } catch (error) {
+        console.error("Error fetching assignments:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   //Function to get username by id
   const getUserNameById = (id) => {
     const user = users.find((user) => user.id === id);
@@ -277,6 +294,13 @@ const UserProvider = ({ children }) => {
       (user) => user.username === username && user.password === password
     );
   };
+
+  // Function get subjectname by id
+  const getSubjectNameById = (id) => {
+    const subject = subjects.find((subject) => subject.subjectid  ===  id);
+    return subject ? subject.subname : "";
+  };
+
   // Function to add a new user
   const addUser = async (newUser) => {
     try {
@@ -331,7 +355,8 @@ const UserProvider = ({ children }) => {
     setComments,
     getUserNameById,
     addComment,
-
+    assignments,
+    getSubjectNameById
     // Add other state and functions as needed
   };
 
