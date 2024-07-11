@@ -17,7 +17,7 @@ import FAQsModal from "./FAQsModal";
 import ContactSupportModal from "./ContactSupportModal";
 
 const NavBar = () => {
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   const navigate = useNavigate();
   const [faqModalShow, setFaqModalShow] = useState(false);
   const [contactModalShow, setContactModalShow] = useState(false);
@@ -30,6 +30,7 @@ const NavBar = () => {
     }
   };
   const handleLogout = () => {
+    setCurrentUser(null);
     // Perform any logout actions if needed
     navigate("/login");
   };
