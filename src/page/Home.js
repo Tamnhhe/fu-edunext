@@ -12,7 +12,7 @@ function Home() {
     console.log("Not logged in");
     return <Navigate to="/login" />;
   }
-
+  
   return (
     <div>
       <Row>
@@ -21,7 +21,7 @@ function Home() {
             <Row>
               <Col className="mt-4">
                 <h1>Welcome to the Edunext Platform</h1>
-                <SemesterDropdown />
+                {/* <SemesterDropdown /> */}
                 <SubjectList />
               </Col>
             </Row>

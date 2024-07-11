@@ -1,0 +1,21 @@
+.status {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .status .upcoming {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .status .on-going {
+    background-color: #ffc107;
+    color: #212529;
+  }
+  
+  .status .completed {
+    background-color: #28a745;
+    color: #fff;
+  }
+  

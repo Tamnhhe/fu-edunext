@@ -6,6 +6,8 @@ import { UserContext } from '../context/UserContext';
 const SemesterDropdown = ({ onSelectSemester }) => {
   const { semesters } = useContext(UserContext);
 
+  
+
   return (
     <Form.Select onChange={(e) => onSelectSemester(e.target.value)}>
       <option>Select Semester</option>
