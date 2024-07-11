@@ -57,10 +57,10 @@ const LoginForm = ({ onSubmit }) => {
           <h3 className="text-center mb-4">Login</h3>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Username</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter email"
+              placeholder="Enter username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
