@@ -9,8 +9,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 
 function SubjectList() {
-  const { subjects, semesters } = useContext(UserContext);
-  const [selectedSemester, setSelectedSemester] = useState(semesters[0]?.semesterid || null);
+  const { subjects, semesters, selectedSemester, setSelectedSemester } = useContext(UserContext);
 
   // console.log("SemesterList", semesters[0]?.semesterid);
   // console.log(selectedSemester);

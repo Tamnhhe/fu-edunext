@@ -158,6 +158,9 @@ const UserProvider = ({ children }) => {
   const [comments, setComments] = useState([]);
   const [groups, setGroups] = useState([]);
   const [assignments, setAssignments] = useState([]);
+  const [selectedSemester, setSelectedSemester] = useState(1);
+
+
   const API_URL = "http://localhost:9999/users"; // Adjust as per your API configuration
   const SEMESTER_URL = "http://localhost:9999/semesters";
   const SUBJECT_URL = "http://localhost:9999/subjects";
@@ -363,7 +366,9 @@ const UserProvider = ({ children }) => {
     addComment,
     assignments,
     getSubjectNameById,
-    getSemesterIdBySubjectId
+    getSemesterIdBySubjectId,
+    selectedSemester,
+    setSelectedSemester
     // Add other state and functions as needed
   };
 
