@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 
 const QuestionForSlot = () => {
   const { id, slotid, questionid } = useParams();
-  const { questions, users, currentUser, comments, setComments, getUserNamebyId } = useContext(UserContext);
+  const { questions, users, currentUser, comments, setComments, getUserNameById } = useContext(UserContext);
   const [comment, setComment] = useState("");
   // const [comments, setComments] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
@@ -42,6 +42,10 @@ const QuestionForSlot = () => {
     navigate(`/subject/${id}/slot/${slotid}/question/${questionId}`);
   };
 
+  const getUserName = (id) => {
+    return getUserNameById(id);
+  };
+
   return (
     <div>
       {/* <NavBar /> */}
@@ -72,7 +76,7 @@ const QuestionForSlot = () => {
                 <ListGroup className="mt-3">
                   {filterComment.map((comment, idx) => (
                     <ListGroup.Item key={idx}>
-                      <strong> {getUserNamebyId(comment.userid)}</strong> {comment.comment}
+                      <strong> {getUserNameById(comment.userid)}</strong> {comment.comment}
                     </ListGroup.Item>
                   ))}
                 </ListGroup>
