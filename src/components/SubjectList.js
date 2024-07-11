@@ -40,7 +40,7 @@ function SubjectList() {
       <div className="d-flex">
         {filteredSubjects.map((subject) => (
           <Card
-            className="custom-card"
+            className="custom-card card-hover"
             style={{ width: "100%", height: "300px", margin: "10px" }}
           >
             <Card.Body className="d-flex flex-column">

@@ -40,7 +40,7 @@ function Assignment() {
 
       <Row>
         {assignments.map(assignment => (
-          <Col key={assignment.assignmentid} md={3} className="mb-3">
+          <Col key={assignment.assignmentid} md={3} className="mb-3 card-hover ">
             <Card>
               <Card.Body>
                 <Card.Title>{assignment.assignmentTitle}</Card.Title>
@@ -58,7 +58,7 @@ function Assignment() {
                
                 <Card.Text> <AccessTimeIcon style={{ marginRight: "8px" }} />  Due Date: {new Date(assignment.duedate).toLocaleDateString()}</Card.Text>
             
-                <Link to={`/subject/${assignment.subjectid}/slot/${assignment.slotid}/question/${assignment.questionid}`} className="btn btn-primary">
+                <Link to={`/subject/${assignment.subjectid}/slot/${assignment.slotid}/question/${assignment.questionid}`} className=" btn btn-primary">
                   View assignment
                 </Link>
 
