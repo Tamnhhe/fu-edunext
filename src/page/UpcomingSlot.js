@@ -67,6 +67,7 @@ function UpcomingSlot() {
             <Card>
               <Card.Body>
                 <Card.Title>{getSubjectNameById(slot.subjectid)}</Card.Title>
+                <Card.Text>{slot.name}</Card.Text>
                 <Card.Title>{slot.title}</Card.Title>
                 <Card.Text>Start Date: {new Date(slot.startdate).toLocaleDateString()}</Card.Text>
                 <Card.Text>End Date: {new Date(slot.enddate).toLocaleDateString()}</Card.Text>

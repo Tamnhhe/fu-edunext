@@ -58,6 +58,7 @@ import Home from './page/Home';
 import Assignment from './page/Assignment';
 import SubjectDetail from './components/SubjectDetail';
 import QuestionForSlot from './components/QuestionForSlot'; // Import QuestionForSlot
+import SlotDetail from './page/SlotDetail';
 import UserProvider from './context/UserContext'; // Import UserProvider
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -95,6 +96,7 @@ const Main = () => {
             <Route path="/upcoming-slot" element={<UpcomingSlot/>} />
             <Route path="/assignment" element={<Assignment />} />
             <Route path="/subject/:id" element={<SubjectDetail />} />
+            <Route path="/subject/:id/slot/:slotid" element={<SlotDetail />} />
             <Route path="/subject/:id/slot/:slotid/question/:questionid" element={<QuestionForSlot />} />
           </Routes>
         </Col>

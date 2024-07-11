@@ -93,172 +93,166 @@
       "enddate": "2024-12-01"
     }
   ],
-  "subjects": [
-    {
-      "subjectid": 1,
-      "subname": "ITE302c",
-      "subtitle": "Information Technology Ethical",
-      "semesterid": 1
-    },
-    {
-      "subjectid": 2,
-      "subname": "SWR302",
-      "subtitle": "Software Requirements Engineering",
-      "semesterid": 1
-    },
-    {
-      "subjectid": 3,
-      "subname": "FER202",
-      "subtitle": "Front-end Development With React",
-      "semesterid": 1
-    },
-    {
-      "subjectid": 4,
-      "subname": "SWP391",
-      "subtitle": "Software Project Management",
-      "semesterid": 1
-    }
-  ],
   "slots": [
     {
       "slotid": 1,
       "title": "Promote the Ethical Use of Data-Driven Technologies",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 1
+      "subjectid": 1,
+      "name": "Slot 1"
     },
     {
       "slotid": 2,
       "title": "Turn Ethical Frameworks into Actionable Steps",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 1
+      "subjectid": 1,
+      "name": "Slot 2"
     },
     {
       "slotid": 3,
       "title": "Detect and Mitigate Ethical Risks",
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
-      "subjectid": 1
+      "subjectid": 1,
+      "name": "Slot 3"
     },
     {
       "slotid": 4,
       "title": "Manage Fairness and Non-Discrimination Risks",
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
-      "subjectid": 1
+      "subjectid": 1,
+      "name": "Slot 4"
     },
     {
       "slotid": 5,
       "title": "Communicate the Business Impacts of Ethical Risks to Diverse Stakeholders",
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
-      "subjectid": 1
+      "subjectid": 1,
+      "name": "Slot 5"
     },
     {
       "slotid": 6,
       "title": "The essential of software requirement",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 2
+      "subjectid": 2,
+      "name": "Slot 1"
     },
     {
       "slotid": 7,
       "title": "Requirements from the customer's perspective (cnt)",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 2
+      "subjectid": 2,
+      "name": "Slot 2"
     },
     {
       "slotid": 8,
       "title": "Group discussion Summary and Exercises (groups)",
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
-      "subjectid": 2
+      "subjectid": 2,
+      "name": "Slot 3"
     },
     {
       "slotid": 9,
       "title": "Establishing the business requirements",
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
-      "subjectid": 2
+      "subjectid": 2,
+      "name": "Slot 4"
     },
     {
       "slotid": 10,
       "title": "Requirements elicitation",
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
-      "subjectid": 2
+      "subjectid": 2,
+      "name": "Slot 5"
     },
     {
       "slotid": 11,
       "title": "Full Stack Web Development: The Big Picture",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 3
+      "subjectid": 3,
+      "name": "Slot 1"
     },
     {
       "slotid": 12,
       "title": "Rendering with JSX + ES 6",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 3
+      "subjectid": 3,
+      "name": "Slot 2"
     },
     {
       "slotid": 13,
       "title": "Creating your own JSX elements",
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
-      "subjectid": 3
+      "subjectid": 3,
+      "name": "Slot 3"
     },
     {
       "slotid": 14,
       "title": "Bootstrap",
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
-      "subjectid": 3
+      "subjectid": 3,
+      "name": "Slot 4"
     },
     {
       "slotid": 15,
       "title": "Bootstrap JavaScript Components",
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
-      "subjectid": 3
+      "subjectid": 3,
+      "name": "Slot 5"
     },
     {
       "slotid": 16,
       "title": "Project team building",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 4
+      "subjectid": 4,
+      "name": "Slot 1"
     },
     {
       "slotid": 17,
       "title": "Software analysis & design guides part 1/2",
       "startdate": "2024-07-01",
       "enddate": "2024-07-10",
-      "subjectid": 4
+      "subjectid": 4,
+      "name": "Slot 2"
     },
     {
       "slotid": 18,
       "title": "Requirement clarification & software design",
       "startdate": "2024-07-01",
       "enddate": "2024-07-11",
-      "subjectid": 4
+      "subjectid": 4,
+      "name": "Slot 3"
     },
     {
       "slotid": 19,
       "title": "Requirement clarification & software design",
       "startdate": "2024-07-01",
       "enddate": "2024-07-30",
-      "subjectid": 4
+      "subjectid": 4,
+      "name": "Slot 4"
     },
     {
       "slotid": 20,
       "title": "Practice: design, code, self-test, integrate",
       "startdate": "2024-07-20",
       "enddate": "2024-07-30",
-      "subjectid": 4
+      "subjectid": 4,
+      "name": "Slot 5"
     }
   ],
   "questions": [
