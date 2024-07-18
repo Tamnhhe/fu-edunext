@@ -745,5 +745,77 @@
       "name": "Group 3",
       "id": "d7ef"
     }
+  ],
+  "submissions": [
+    {
+      "id": 1,
+      "assignmentid": 1,
+      "submissiondate": "2024-01-14",
+      "submissionContent": "Submission content for Assignment 1 by User 1.",
+      "userid": 1
+    },
+    {
+      "id": 2,
+      "assignmentid": 1,
+      "submissiondate": "2024-01-15",
+      "submissionContent": "Submission content for Assignment 1 by User 2.",
+      "userid": 2
+    },
+    {
+      "id": 3,
+      "assignmentid": 2,
+      "submissiondate": "2024-01-21",
+      "submissionContent": "Submission content for Assignment 2 by User 3.",
+      "userid": 3
+    },
+    {
+      "id": 4,
+      "assignmentid": 2,
+      "submissiondate": "2024-01-22",
+      "submissionContent": "Submission content for Assignment 2 by User 4.",
+      "userid": 4
+    },
+    {
+      "id": 5,
+      "assignmentid": 3,
+      "submissiondate": "2024-01-14",
+      "submissionContent": "Submission content for Assignment 3 by User 5.",
+      "userid": 5
+    },
+    {
+      "id": 6,
+      "assignmentid": 3,
+      "submissiondate": "2024-01-15",
+      "submissionContent": "Submission content for Assignment 3 by User 6.",
+      "userid": 6
+    },
+    {
+      "id": 7,
+      "assignmentid": 4,
+      "submissiondate": "2024-01-21",
+      "submissionContent": "Submission content for Assignment 4 by User 7.",
+      "userid": 7
+    },
+    {
+      "id": 8,
+      "assignmentid": 4,
+      "submissiondate": "2024-01-22",
+      "submissionContent": "Submission content for Assignment 4 by User 8.",
+      "userid": 8
+    },
+    {
+      "id": 9,
+      "assignmentid": 1,
+      "submissiondate": "2024-01-13",
+      "submissionContent": "Submission content for Assignment 1 by User 9.",
+      "userid": 9
+    },
+    {
+      "id": 10,
+      "assignmentid": 2,
+      "submissiondate": "2024-01-20",
+      "submissionContent": "Submission content for Assignment 2 by User 10.",
+      "userid": 10
+    }
   ]
 }

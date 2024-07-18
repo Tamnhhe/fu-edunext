@@ -6,10 +6,24 @@ import { Card, Row, Col, Form, Button, ListGroup, Dropdown, DropdownButton } fro
 
 const AssignmentDetail = () => {
     const { id, slotid, assignmentid } = useParams();
-    const { assignments, users, currentUser, comments, setComments, getUserNameById, addComment } = useContext(UserContext);
+    const { assignments, users, currentUser, comments, setComments, getUserNameById,submissions } = useContext(UserContext);
     const [answer, setAnswer] = useState("");
     const navigate = useNavigate();
 
+
+    if (!currentUser) {
+        console.log("Not logged in");
+        return navigate("/login");
+    }
+    console.log(currentUser.id," ", assignmentid);
+
+    const findSubmission = () => {
+        return submissions.find((submission) => submission.assignmentid === parseInt(assignmentid) && submission.userid == currentUser.id);
+    };
+
+    const submission = findSubmission();
+
+    console.log("Submission",submissions);
 
     // Find the specific assignment based on assignmentid , slotid, and subjectid
     const assignment = assignments.find(
@@ -31,28 +45,17 @@ const AssignmentDetail = () => {
                 created: new Date().toISOString().slice(0, 10),
             };
             console.log(newComment);
-            addComment(newComment);
         }
     };
 
     return (
         <div>
             <Row>
+                {assignment && (
                 <Col md={9} className="mt-5 mx-auto">
                     <h3>Assignment Details</h3>
-                    {/* {assignment && (
-            <Card>
-              <Card.Body>
-                <Card.Title>{assignment.assignmentTitle}</Card.Title>
-                <Card.Text>{assignment.assignmentDescription}</Card.Text>
-                <Card.Text>Due Date: {assignment.duedate}</Card.Text>
-                </Card.Body>
-            </Card>
-            
-          )} */}
 
                     <div className="container">
-                        <h1>{assignment.title}</h1>
                         <Card>
                             <Card.Body>
                                 <Card.Title><h4>Content</h4></Card.Title>
@@ -76,7 +79,7 @@ const AssignmentDetail = () => {
                             <Col md={6}>
                                 <Card>
                                     <Card.Body>
-                                        <Card.Text>Score: </Card.Text>
+                                        <Card.Text>Score: Undifined</Card.Text>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -88,21 +91,21 @@ const AssignmentDetail = () => {
                             <Col md={4}>
                                 <Card>
                                     <Card.Body>
-                                        <Card.Text>Submission Status:</Card.Text>
+                                        <Card.Text>Submission Status: {submission ? "Submitted" : "Not Submitted"}</Card.Text>
                                     </Card.Body>
                                 </Card>
                             </Col>
                             <Col md={4}>
-                            <Card>
+                                <Card>
                                     <Card.Body>
-                                        <Card.Text>Submission Date:</Card.Text>
+                                        <Card.Text>Submission Date: {submission ? submission.submissiondate : "NaN"}</Card.Text>
                                     </Card.Body>
                                 </Card>
                             </Col>
                             <Col md={4}>
-                            <Card>
+                                <Card>
                                     <Card.Body>
-                                        <Card.Text>Link/File Assignment:</Card.Text>
+                                        <Card.Text>Link/File Assignment: {submission ? <a href={`${submission.submissionContent }`}> Submission</a>: "NaN"}</Card.Text>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -126,6 +129,7 @@ const AssignmentDetail = () => {
 
 
                 </Col>
+                )}
             </Row>
         </div>
     );

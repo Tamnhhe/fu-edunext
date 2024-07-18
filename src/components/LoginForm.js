@@ -7,7 +7,7 @@ import { UserContext } from '../context/UserContext'; // Import UserContext
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '../css/LoginForm.css'; // Import custom CSS for styling
 
-const LoginForm = ({ onSubmit }) => {
+const LoginForm = () => {
     const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
